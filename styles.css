@@ -1,0 +1,46 @@
+
+body {
+    max-width: 500px;
+    background: #FAFAFA;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 2px solid #305A72;
+}
+
+#centeredContent {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    background-color: white;        
+}
+
+.roweven {
+    background: #A1E2E8;
+    padding: 12px 20px;
+    margin: 8px 0;
+    
+}
+
+.rowodd { 
+    background: #F6D188;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+

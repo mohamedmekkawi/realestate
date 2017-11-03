@@ -1,0 +1,15 @@
+Date: 3-11-2017
+
+
+
+What i have i done?
+complete The proposal and delivered
+Starting work in database design
+users table
+properties table
+
+What will i do from now until next Scrum ?
+complete The db tables
+
+Where do i need help from my teacher or internet?
+internet => how to use bootstrap

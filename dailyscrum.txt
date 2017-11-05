@@ -1,17 +1,17 @@
 1 - What i have i done?
 2 - What will i do from now until next Scrum ?
-3 - Where do i need help from my teacher or internet?
+3 - Where do i need help from my teacher or Internet?
 
 => Date: 3-11-2017
 1- { complete The proposal and delivered } ,  { Starting work in database design} , ( users table}, { properties table }, { create trello board }
 2- { complete The db tables }, { Register and login page }
-3- internet => how to use bootstrap
+3- Internet => how to use bootstrap
 
 =================
 => Date: 4-11-2017
 1-  { Fixing Error: Permission denied }, { internal_error.html.twig }, {master.html.twig}, {register.html.twig},
 2-  { complete db tables }, { Register and login page }
-3- internet => how to use bootstrap
+3- Internet => how to use bootstrap
 
 =================
 => Date: 5-11-2017

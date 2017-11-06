@@ -38,12 +38,45 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
         // line 17
         echo " 
     <body>
+          <div class=\"navbar-default\">
+        <div class=\"container\">
+            <div class=\"navbar-header nabar-left\">
+                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#nav-bar-links\">
+                    <span class=\"sr-only\">Toggle navigation</span> 
+                    <span class=\"icon-bar\"></span> 
+                    <span class=\"icon-bar\"></span> 
+                </button>
+                <a class=\"navbar-brand\" href=\"../\">
+                    <img src=\"images/logo.png\" width=\"140\" style=\"margin-top:-10px\">
+                </a> 
+            </div>
+            
+            <div class=\"collapse navbar-collapse\" id=\"nav-bar-links\">
 
+                <form class=\"navbar-form navbar-right\" style=\"border: none\" onSubmit=\"return Validate()\" method=\"post\" action=\"\">
+                    
+                    <div class=\"form-group\">
+                        <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"User Name\">
+                        <input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Password\">
+                        <input type=\"submit\" value=\"Login In\" name=\"login\" class=\"btn btn-default\">
+                    </div>
+                </form>
+
+                <ul class=\"nav navbar-nav navbar-right\">
+                    <li><a href=\"\">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+";
+        // line 51
+        echo "
         <div id=\"centeredContent\">
         ";
-        // line 21
+        // line 53
         $this->displayBlock('content', $context, $blocks);
-        // line 22
+        // line 54
         echo "        </div>
         <footer>
             <p class=\"text-center col-md-12\"r style=\"padding-top: 10px\">
@@ -77,7 +110,7 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
 ";
     }
 
-    // line 21
+    // line 53
     public function block_content($context, array $blocks = array())
     {
     }
@@ -89,7 +122,7 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
 
     public function getDebugInfo()
     {
-        return array (  81 => 21,  69 => 7,  63 => 5,  47 => 22,  45 => 21,  39 => 17,  35 => 14,  33 => 7,  28 => 5,  22 => 1,);
+        return array (  114 => 53,  102 => 7,  96 => 5,  80 => 54,  78 => 53,  74 => 51,  39 => 17,  35 => 14,  33 => 7,  28 => 5,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -120,6 +153,38 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
  {#=========================   ================================== #}
  
     <body>
+          <div class=\"navbar-default\">
+        <div class=\"container\">
+            <div class=\"navbar-header nabar-left\">
+                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#nav-bar-links\">
+                    <span class=\"sr-only\">Toggle navigation</span> 
+                    <span class=\"icon-bar\"></span> 
+                    <span class=\"icon-bar\"></span> 
+                </button>
+                <a class=\"navbar-brand\" href=\"../\">
+                    <img src=\"images/logo.png\" width=\"140\" style=\"margin-top:-10px\">
+                </a> 
+            </div>
+            
+            <div class=\"collapse navbar-collapse\" id=\"nav-bar-links\">
+
+                <form class=\"navbar-form navbar-right\" style=\"border: none\" onSubmit=\"return Validate()\" method=\"post\" action=\"\">
+                    
+                    <div class=\"form-group\">
+                        <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"User Name\">
+                        <input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Password\">
+                        <input type=\"submit\" value=\"Login In\" name=\"login\" class=\"btn btn-default\">
+                    </div>
+                </form>
+
+                <ul class=\"nav navbar-nav navbar-right\">
+                    <li><a href=\"\">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{#=========================   ================================== #}
 
         <div id=\"centeredContent\">
         {% block content %}{% endblock %}

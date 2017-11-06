@@ -66,44 +66,10 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
         }
         // line 23
         echo "    
-";
-        // line 25
-        echo "
-    <div class=\"navbar-default\">
-        <div class=\"container\">
-            <div class=\"navbar-header nabar-left\">
-                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#nav-bar-links\">
-                    <span class=\"sr-only\">Toggle navigation</span> 
-                    <span class=\"icon-bar\"></span> 
-                    <span class=\"icon-bar\"></span> 
-                </button>
-                <a class=\"navbar-brand\" href=\"../\">
-                    <img src=\"images/logo.png\" width=\"140\" style=\"margin-top:-10px\">
-                </a> 
-            </div>
-            
-";
-        // line 40
-        echo "            <div class=\"collapse navbar-collapse\" id=\"nav-bar-links\">
 
-                <form class=\"navbar-form navbar-right\" style=\"border: none\" onSubmit=\"return Validate()\" method=\"post\" action=\"\">
-                    
-                    <div class=\"form-group\">
-                        <input type=\"text\" class=\"form-control\" placeholder=\"User Name\" name=\"username\">
-                        <input type=\"password\" class=\"form-control\" placeholder=\"Password\" name=\"password\">
-                        <input type=\"submit\" class=\"btn btn-default\" value=\"Sign In\" name=\"submit1\">
-                    </div>
-                </form>
-
-                <ul class=\"nav navbar-nav navbar-right\">
-                    <li><a href=\"\">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
 ";
-        // line 59
+        // line 27
         echo "
     <div class=\"container\">
         <div class=\"well\">
@@ -117,7 +83,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                             <label for=\"NAME\" class=\"col-md-3 control-label\">Name:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"text\" class=\"form-control\" placeholder=\"Ex. Mohamed-mekkawi\" name=\"name\" value=\"";
-        // line 71
+        // line 39
         echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "name", array()), "html", null, true);
         echo "\">
                             </div>
@@ -131,14 +97,14 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                                 
                                 <label class=\"radio-inline\">
                                     <input type=\"radio\" name=\"seller\" value=\"";
-        // line 82
+        // line 50
         echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "seller", array()), "html", null, true);
         echo "\">Seller
                                 </label>
                                 
                                 <label class=\"radio-inline\">
                                     <input type=\"radio\" name=\"buyer\" value=\"";
-        // line 86
+        // line 54
         echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "buyer", array()), "html", null, true);
         echo "\">buyer
                                 </label>
@@ -149,7 +115,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                             <div class=\"col-md-9\">
                                 
                                 <input type=\"text\" class=\"form-control\" name=\"phoneNumber\" placeholder=\"Ex. (514)619-6420\" value=\"";
-        // line 94
+        // line 62
         echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "phoneNumber", array()), "html", null, true);
         echo "\">
                             </div>
@@ -158,7 +124,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                             <label for=\"EMAIL\" class=\"col-md-3 control-label\">Email:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"email\" class=\"form-control\" id=\"EMAIL\" name=\"EMAIL\" placeholder=\"Ex. john-smith@example.com\" maxlength=\"40\" value=\"";
-        // line 100
+        // line 68
         echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "name", array()), "html", null, true);
         echo "\">
                             </div>
@@ -190,7 +156,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                 </div>
                 
 ";
-        // line 130
+        // line 98
         echo "
     <div class=\"col-md-4\">
         <h3>How to Register <span class=\"glyphicon glyphicon-asterisk\"></span></h3>
@@ -225,7 +191,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
 
     public function getDebugInfo()
     {
-        return array (  194 => 130,  162 => 100,  153 => 94,  142 => 86,  135 => 82,  121 => 71,  107 => 59,  87 => 40,  71 => 25,  68 => 23,  64 => 21,  55 => 19,  51 => 18,  48 => 17,  46 => 16,  43 => 15,  40 => 13,  37 => 12,  32 => 6,  29 => 5,  11 => 1,);
+        return array (  160 => 98,  128 => 68,  119 => 62,  108 => 54,  101 => 50,  87 => 39,  73 => 27,  68 => 23,  64 => 21,  55 => 19,  51 => 18,  48 => 17,  46 => 16,  43 => 15,  40 => 13,  37 => 12,  32 => 6,  29 => 5,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -261,39 +227,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
         </ul>
     {% endif %}
     
-{#=========================   ================================== #}
 
-    <div class=\"navbar-default\">
-        <div class=\"container\">
-            <div class=\"navbar-header nabar-left\">
-                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#nav-bar-links\">
-                    <span class=\"sr-only\">Toggle navigation</span> 
-                    <span class=\"icon-bar\"></span> 
-                    <span class=\"icon-bar\"></span> 
-                </button>
-                <a class=\"navbar-brand\" href=\"../\">
-                    <img src=\"images/logo.png\" width=\"140\" style=\"margin-top:-10px\">
-                </a> 
-            </div>
-            
-{#=========================   ================================== #}
-            <div class=\"collapse navbar-collapse\" id=\"nav-bar-links\">
-
-                <form class=\"navbar-form navbar-right\" style=\"border: none\" onSubmit=\"return Validate()\" method=\"post\" action=\"\">
-                    
-                    <div class=\"form-group\">
-                        <input type=\"text\" class=\"form-control\" placeholder=\"User Name\" name=\"username\">
-                        <input type=\"password\" class=\"form-control\" placeholder=\"Password\" name=\"password\">
-                        <input type=\"submit\" class=\"btn btn-default\" value=\"Sign In\" name=\"submit1\">
-                    </div>
-                </form>
-
-                <ul class=\"nav navbar-nav navbar-right\">
-                    <li><a href=\"\">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
 {#=========================   ================================== #}
 

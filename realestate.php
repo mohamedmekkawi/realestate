@@ -54,9 +54,9 @@ if (!isset($_SESSION['user'])) {
 }
 
 // ============================================================= INDEX ================================================================
-$app->get('/index.html.twig', function() use ($app) {
-    
-   echo "this is a On Q8 website"; 
+$app->get('/', function() use ($app) {
+    $app->render('index.html.twig');
+   //echo "this is  ONQ8.com website"; 
 });
 
 // ============================================================= ADMINS TABLE =========================================================

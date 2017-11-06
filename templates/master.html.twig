@@ -1,28 +1,42 @@
 <html>
     <head>
-        <link href="/styles.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <meta charset="UTF-8">
         <title>{% block title %}Default{% endblock %}</title>
         
- {#=========================   ================================== #}
-
 {% block headextra %} 
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" >
     <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo_icon.ico">     
 {% endblock %}
-
+ </head>
+ 
  {#=========================   ================================== #}
  
-    </head>
     <body>
+          <div id="header">
+        {% if userSession %}
+            <p>Hello, {{userSession.name}}!! /<a href="/logout">Log out</a></p> 
+        {% else %}
+            <p> Hello, guest. please <a href="/login">log in</a> or <a href="/register">register</a><p>
+            {% endif %}
+          </div>
+
 
         <div id="centeredContent">
         {% block content %}{% endblock %}
         </div>
+        <footer>
+            <p class="text-center col-md-12"r style="padding-top: 10px">
+            <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
+        </footer>
+        
+        <script src="../script/registration.js"></script>
+	<script src="../script/validateform.js"></script>
+	<script src="../script/jquery-1.11.2.min.js"></script>
+	<script src="../script/bootstrap.min.js"></script>
+        
     </body>
 </html>

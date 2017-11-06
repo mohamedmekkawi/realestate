@@ -19,8 +19,8 @@ DB::$error_handler = 'sql_error_handler';
 
 function non_sql_hundler($params) {
     global $app, $log;
-    $log->err("Error: " . $params['error']);
-    http_response_code(500);
+    $log->err("Error: " . $params['error']); 
+   http_response_code(500);
     $app->render('internal_error.html.twig');
 
     die;
@@ -52,17 +52,21 @@ $log->pushHandler(new StreamHandler('logs/errors.log', Logger::ERROR));
 if (!isset($_SESSION['user'])) {
     $_SESSION['user'] = array();
 }
+
 // ============================================================= INDEX ================================================================
-$app->get('/', function() use ($app) {
+$app->get('/index.html.twig', function() use ($app) {
     
    echo "this is a On Q8 website"; 
 });
-// ============================================================= ADMINS TABLE ================================================================
-// 
+
+// ============================================================= ADMINS TABLE =========================================================
+
+
 // ================================================== login
 $app->get('/admin/login', function() use ($app) {
     $app->render('admin/login.html.twig');
 });
+
 $app->post('/admin/login',function() use ($app) {
     $username = $app->request()->post('username');
     $pass = $app->request()->post('pass');
@@ -125,11 +129,7 @@ $app->post('/register', function() use ($app) {
     $email = $app->request()->post('email');
     $pass1 = $app->request()->post('pass1');
     $pass2 = $app->request()->post('pass2');
-    $birthDate = $app->request()->post('birthDate');
-    $gender = $app->request()->post('gender');
-    $postalCode = $app->request()->post('postalCode');
-    $city = $app->request()->post('city');
-    $country = $app->request()->post('country');
+    
     
     
   

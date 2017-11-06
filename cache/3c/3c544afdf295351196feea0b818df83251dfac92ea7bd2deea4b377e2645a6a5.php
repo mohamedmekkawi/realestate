@@ -109,10 +109,7 @@ class __TwigTemplate_c2cc34c52a4991dd6432617563c84139204aa38de8e706726ae4df5a0f5
 ";
         // line 61
         echo "
-        <footer>
-            <p class=\"text-center col-md-12\"r style=\"padding-top: 30px\">
-                <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
-        </footer>
+        
 
     </div>
     </div>
@@ -206,10 +203,7 @@ class __TwigTemplate_c2cc34c52a4991dd6432617563c84139204aa38de8e706726ae4df5a0f5
 
 {#=========================   ================================== #}
 
-        <footer>
-            <p class=\"text-center col-md-12\"r style=\"padding-top: 30px\">
-                <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
-        </footer>
+        
 
     </div>
     </div>

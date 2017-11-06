@@ -207,14 +207,6 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
     </div>
 </div>
 
-";
-        // line 147
-        echo "
-        <footer>
-            <p class=\"text-center col-md-12\"r style=\"padding-top: 30px\">
-                <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
-        </footer>
-
     </div>
     </div>
 
@@ -233,7 +225,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
 
     public function getDebugInfo()
     {
-        return array (  212 => 147,  194 => 130,  162 => 100,  153 => 94,  142 => 86,  135 => 82,  121 => 71,  107 => 59,  87 => 40,  71 => 25,  68 => 23,  64 => 21,  55 => 19,  51 => 18,  48 => 17,  46 => 16,  43 => 15,  40 => 13,  37 => 12,  32 => 6,  29 => 5,  11 => 1,);
+        return array (  194 => 130,  162 => 100,  153 => 94,  142 => 86,  135 => 82,  121 => 71,  107 => 59,  87 => 40,  71 => 25,  68 => 23,  64 => 21,  55 => 19,  51 => 18,  48 => 17,  46 => 16,  43 => 15,  40 => 13,  37 => 12,  32 => 6,  29 => 5,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -390,13 +382,6 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
         </ol>
     </div>
 </div>
-
-{#=========================   ================================== #}
-
-        <footer>
-            <p class=\"text-center col-md-12\"r style=\"padding-top: 30px\">
-                <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
-        </footer>
 
     </div>
     </div>

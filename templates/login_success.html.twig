@@ -1,9 +1,9 @@
 {% extends "master.html.twig" %}
 
 {% block title %}
-    Resister success
+Login Success
 {% endblock %}
 
 {% block content %}
-<p>You've been registered. You may now <a href='../login'>log in</a></p>
+<p>Login successful,  {{userSession.name}} <a href="/">click to continue</a>.</p>
 {% endblock %}

@@ -21,49 +21,54 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
         // line 1
         echo "<html>
     <head>
-        <link href=\"/styles.css\" rel=\"stylesheet\">
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
         <meta charset=\"UTF-8\">
         <title>";
-        // line 6
+        // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         
- ";
-        // line 9
-        echo "
 ";
-        // line 10
+        // line 7
         $this->displayBlock('headextra', $context, $blocks);
-        // line 18
-        echo "
+        // line 14
+        echo " </head>
+ 
  ";
-        // line 20
+        // line 17
         echo " 
-    </head>
     <body>
 
         <div id=\"centeredContent\">
         ";
-        // line 25
+        // line 21
         $this->displayBlock('content', $context, $blocks);
-        // line 26
+        // line 22
         echo "        </div>
+        <footer>
+            <p class=\"text-center col-md-12\"r style=\"padding-top: 10px\">
+            <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
+        </footer>
+        
+        <script src=\"../script/registration.js\"></script>
+\t<script src=\"../script/validateform.js\"></script>
+\t<script src=\"../script/jquery-1.11.2.min.js\"></script>
+\t<script src=\"../script/bootstrap.min.js\"></script>
+        
     </body>
 </html>";
     }
 
-    // line 6
+    // line 5
     public function block_title($context, array $blocks = array())
     {
         echo "Default";
     }
 
-    // line 10
+    // line 7
     public function block_headextra($context, array $blocks = array())
     {
         echo " 
-    <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
     <link href=\"css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" >
@@ -72,7 +77,7 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
 ";
     }
 
-    // line 25
+    // line 21
     public function block_content($context, array $blocks = array())
     {
     }
@@ -84,7 +89,7 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
 
     public function getDebugInfo()
     {
-        return array (  76 => 25,  63 => 10,  57 => 6,  51 => 26,  49 => 25,  42 => 20,  39 => 18,  37 => 10,  34 => 9,  29 => 6,  22 => 1,);
+        return array (  81 => 21,  69 => 7,  63 => 5,  47 => 22,  45 => 21,  39 => 17,  35 => 14,  33 => 7,  28 => 5,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -99,30 +104,36 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
     {
         return new Twig_Source("<html>
     <head>
-        <link href=\"/styles.css\" rel=\"stylesheet\">
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Default{% endblock %}</title>
         
- {#=========================   ================================== #}
-
 {% block headextra %} 
-    <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
     <link href=\"css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" >
     <link href=\"css/stylesheet.css\" type=\"text/css\" rel=\"stylesheet\">
     <link rel=\"shortcut icon\" href=\"images/logo_icon.ico\">     
 {% endblock %}
-
+ </head>
+ 
  {#=========================   ================================== #}
  
-    </head>
     <body>
 
         <div id=\"centeredContent\">
         {% block content %}{% endblock %}
         </div>
+        <footer>
+            <p class=\"text-center col-md-12\"r style=\"padding-top: 10px\">
+            <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
+        </footer>
+        
+        <script src=\"../script/registration.js\"></script>
+\t<script src=\"../script/validateform.js\"></script>
+\t<script src=\"../script/jquery-1.11.2.min.js\"></script>
+\t<script src=\"../script/bootstrap.min.js\"></script>
+        
     </body>
 </html>", "master.html.twig", "/Applications/MAMP/htdocs/realestate/templates/master.html.twig");
     }

@@ -3,3 +3,4 @@
 [2017-10-31 14:29:35] main.ERROR:  in query: INSERT INTO `todos` (`task`,`dueDate`,`isDone`,`ownerId`) VALUES ('Buy car', '2017/10/31', 'pending', '1') [] []
 [2017-10-31 14:30:38] main.ERROR: SQL Error: Duplicate entry '1' for key 'ownerId' [] []
 [2017-10-31 14:30:38] main.ERROR:  in query: INSERT INTO `todos` (`task`,`dueDate`,`isDone`,`ownerId`) VALUES ('Buy Books', '2017/10/31', 'pending', '1') [] []
+[2017-11-06 00:39:28] main.ERROR: Error: Unable to connect to MySQL server! Error: Access denied for user 'onq8_realestate'@'localhost' (using password: YES) [] []

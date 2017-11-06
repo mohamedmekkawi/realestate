@@ -1,10 +1,71 @@
-{% if error %}
-    <p>Login invalid. Try again or <a href="/register">register</a>.</p>
-{% endif %}
+{% extends "master.html.twig" %}
 
-<form  method="post">
-    Username: <input type="text" name="username"><br>
-    Password: <input type="password" name="pass"><br>
-    <input type="submit" value="Login">
-</form>
+{#=========================   ================================== #}
+
+{% block title %}
+    Login
+{% endblock %}
+
+
+
+{% block content %}
+
+{#=========================   ================================== #}
+
+    {% if errorList %}
+        <ul>
+            {% for error in errorList %}
+                <li>{{error}}</li>
+                {% endfor %}
+        </ul>
+    {% endif %}
+    
+{#=========================   ================================== #}
+
+    <div class="navbar-default">
+        <div class="container">
+            <div class="navbar-header nabar-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-bar-links">
+                    <span class="sr-only">Toggle navigation</span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" href="../">
+                    <img src="images/logo.png" width="140" style="margin-top:-10px">
+                </a> 
+            </div>
+            
+{#=========================   ================================== #}
+            <div class="collapse navbar-collapse" id="nav-bar-links">
+
+                <form class="navbar-form navbar-right" style="border: none" onSubmit="return Validate()" method="post" action="">
+                    
+                    <div class="form-group">
+                        <input type="text" name="username" class="form-control" placeholder="User Name">
+                        <input type="password" name="pass" class="form-control" placeholder="Password">
+                        <input type="submit" value="Login In" name="login" class="btn btn-default">
+                    </div>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{#=========================   ================================== #}
+
+
+{#=========================   ================================== #}
+
+        <footer>
+            <p class="text-center col-md-12"r style="padding-top: 30px">
+                <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
+        </footer>
+
+    </div>
+    </div>
+
+{% endblock %} 
 

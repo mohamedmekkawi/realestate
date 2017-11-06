@@ -4,14 +4,25 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <meta charset="UTF-8">
         <title>{% block title %}Default{% endblock %}</title>
-    {% block headextra %}{% endblock %}
+        
+ {#=========================   ================================== #}
 
+{% block headextra %} 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" >
+    <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo_icon.ico">     
+{% endblock %}
 
-</head>
-<body>
+ {#=========================   ================================== #}
+ 
+    </head>
+    <body>
 
-    <div id="centeredContent">
-            {% block content %}{% endblock %}
-    </div>
-</body>
+        <div id="centeredContent">
+        {% block content %}{% endblock %}
+        </div>
+    </body>
 </html>

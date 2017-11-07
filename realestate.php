@@ -11,7 +11,7 @@ DB::$dbName = 'onq8_realestate';
 DB::$user = 'onq8_realestate';
 DB::$encoding = 'utf8';
 DB::$password = 'Adam@462011';
-
+DB::$host = 'onq8.com';
 
 // ======================================= ERROR handlers
 DB::$error_handler = 'sql_error_handler';
@@ -212,15 +212,21 @@ $app->get('/register', function() use ($app) {
     $app->render('register.html.twig');
 });
 $app->post('/register', function() use ($app) {
-    $name = $app->request()->post('name');
-    $username = $app->request()->post('username');
-    $email = $app->request()->post('email');
-    $pass1 = $app->request()->post('pass1');
-    $pass2 = $app->request()->post('pass2');
-    $userType = $app->request()->post('userType');
+    $name       = $app->request()->post('name');
+    $username   = $app->request()->post('username');
+    $email      = $app->request()->post('email');
+    $pass1      = $app->request()->post('pass1');
+    $pass2      = $app->request()->post('pass2');
+    $userType   = $app->request()->post('userType');
     
    $passEnc = password_hash($pass1, PASSWORD_BCRYPT);
-     $values = array('name' => $name, 'username'=> $username, 'email' => $email, 'password' => $passEnc, 'userType' => $userType, );
+   $values = array(
+       'name'     => $name,
+       'username' => $username,
+       'email'    => $email,
+       'password' => $passEnc,
+       'userType' => $userType
+           );
         
     $errorList = array();
     //

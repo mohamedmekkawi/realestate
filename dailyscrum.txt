@@ -21,7 +21,7 @@
 
 =================
 => Date: 6-11-2017
-1- { bootstrap } {Test registration and log in} {modified Database}
+1- { bootstrap } {Test registration and log in} {modified Database}{DB relations}
 2- { add properties }
 3-
 

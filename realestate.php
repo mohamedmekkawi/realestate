@@ -281,4 +281,6 @@ $app->post('/register', function() use ($app) {
     }
      
 });
+require_once 'account.php';
+
 $app->run();

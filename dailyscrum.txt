@@ -27,14 +27,14 @@
 
 =================
 => Date: 7-11-2017
-1- Test registration and log in,  NOT DONE - Implement User can post, 
-2- Implement User can post an properties
+1- Test registration and log in,set up remote database
+2- Implement User can post an properties, 
 3-
 
 =================
 => Date: 8-11-2017
-1-
-2-
+1- set up remote database, Registration password validation, 
+2- password reset
 3-
 
 =================

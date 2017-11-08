@@ -7,8 +7,8 @@ session_start();
 
 require_once 'vendor/autoload.php';
 
-DB::$dbName = 'onq8_realestate';
-DB::$user = 'onq8_realestate';
+DB::$dbName = 'onq8_realestate2';
+DB::$user = 'onq8_realestate2';
 DB::$encoding = 'utf8';
 DB::$password = 'Adam@462011';
 DB::$host = 'onq8.com';
@@ -50,13 +50,66 @@ if (!isset($_SESSION['user'])) {
     $_SESSION['user'] = array();
 }
 
-$twig = $app->view()->getEnvironment();
-$twig->addGlobal('userSession', $_SESSION['user']);
-$app->get('/', function() use ($app) {
-    echo 'OnQ8.com';
+// URL/event handlers go here
+$app->get('/products(/:page)', function($page = 1) use ($app) {
+    $perPage = 4;
+    $totalCount = DB::queryFirstField ("SELECT COUNT(*) AS count FROM products");
+    $maxPages = ($totalCount + $perPage - 1) / $perPage;
+    if ($page > $maxPages) {
+        http_response_code(404);
+        $app->render('not_found.html.twig');
+        return;
+    }
+    $skip = ($page - 1) * $perPage;
+    $productList = DB::query("SELECT * FROM products ORDER BY id LIMIT %d,%d", $skip, $perPage);
+    $app->render('products.html.twig', array(
+        "productList" => $productList,
+        "maxPages" => $maxPages
+        ));
+});
+
+// Products pagination usinx AJAX - main page
+$app->get('/newproducts(/:page)', function($page = 1) use ($app) {
+    $perPage = 4;
+    $totalCount = DB::queryFirstField ("SELECT COUNT(*) AS count FROM products");
+    $maxPages = ($totalCount + $perPage - 1) / $perPage;
+    if ($page > $maxPages) {
+        http_response_code(404);
+        $app->render('not_found.html.twig');
+        return;
+    }
+    $skip = ($page - 1) * $perPage;
+    $productList = DB::query("SELECT * FROM products ORDER BY id LIMIT %d,%d", $skip, $perPage);
+    $app->render('newproducts.html.twig', array(
+        "productList" => $productList,
+        "maxPages" => $maxPages,
+        "currentPage" => $page
+        ));
+});
+// Products pagination usinx AJAX - just the table of products
+$app->get('/ajax/newproducts(/:page)', function($page = 1) use ($app) {
+    $perPage = 4;
+    $totalCount = DB::queryFirstField ("SELECT COUNT(*) AS count FROM products");
+    $maxPages = ($totalCount + $perPage - 1) / $perPage;
+    if ($page > $maxPages) {
+        http_response_code(404);
+        $app->render('not_found.html.twig');
+        return;
+    }
+    $skip = ($page - 1) * $perPage;
+    $productList = DB::query("SELECT * FROM products ORDER BY id LIMIT %d,%d", $skip, $perPage);
+    $app->render('ajaxnewproducts.html.twig', array(
+        "productList" => $productList,
+        ));
 });
 
 
-require_once 'users.php';
+
+require_once 'account.php';
+
+require_once 'admin.php';
+
+
+
 
 $app->run();

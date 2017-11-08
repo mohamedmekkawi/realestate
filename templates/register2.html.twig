@@ -1,0 +1,149 @@
+{% extends "master.html.twig" %}
+
+{#=========================   ================================== #}
+
+{% block title %}
+    Resister
+{% endblock %}
+
+
+
+
+{% block content %}
+
+    {#=========================   ================================== #}
+
+    {% if errorList %}
+        <ul>
+            {% for error in errorList %}
+                <li>{{error}}</li>
+                {% endfor %}
+        </ul>
+    {% endif %}
+
+
+
+    {#=========================   ================================== #}
+    <script>
+        $(document).ready(function () {
+            $('input[name=email]').bind("propertychange change click keyup input paste", function () {
+                var email = $('input[name=email]').val();
+                $('#isTaken').load('/isemailregistered/' + email);
+            });
+        });
+
+        $(document).ready(function () {
+            $('input[name=username]').bind("propertychange change click keyup input paste", function () {
+                var username = $('input[name=username]').val();
+                $('#UisTaken').load('/isusernameregistered/' + username);
+            });
+        });
+
+    </script>
+
+    <div class="container">
+        <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Registration Form</h3>
+                    <form class="form-horizontal" method="post" enctype="multipart/form-data">
+
+                        <div name="form-validate" class="form-group">
+
+                            {#=============  Name   ==================== #}
+                            <label class="col-md-3 control-label">Full Name:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="name" value="{{v.name}}" class="form-control" placeholder="Ex. Mohamed-mekkawi" >
+                            </div>
+                        </div>
+                        {#=============  Username   ==================== #}
+
+                        <div name="form-validate" class="form-group">
+                            <label class="col-md-3 control-label">User Name:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="username" value="{{v.username}}" class="form-control"  placeholder="At least 6 characters with letters or digits." >
+                            </div>
+                        </div>
+
+                        {#=============  Email   ==================== #}
+                        <div name="form-validate" class="form-group">
+                            <label class="col-md-3 control-label">Email:</label>
+                            <div class="col-md-9">
+                                <input type="email" name="email" value="{{v.email}}" class="form-control" id="EMAIL"  placeholder="Ex. john-mohamed@example.com" ><span id="isTaken"></span>
+                            </div>
+                        </div>
+                        {#=============  phone   ==================== #}
+                        <div name="form-validate" class="form-group">
+                            <label class="col-md-3 control-label">Phone:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="phone" value="{{v.phone}}" class="form-control" id="EMAIL"  placeholder="(514)555-5555" ><span id="isTaken"></span>
+                            </div>
+                        </div>
+
+
+                        {#=============  Password   ==================== #}
+
+                        <div name="form-validate" class="form-group">
+                            <label class="col-md-3 control-label">Password:</label>
+                            <div class="col-md-9">
+                                <input type="password" name="pass1" class="form-control"   placeholder="At least 6 characters, with capital letters & digits.">
+                            </div>
+                        </div>
+
+                        {#=============  Password(repeat) ==================== #}
+
+                        <div name="form-validate" class="form-group">
+                            <label for="CONFIRM_PASS" class="col-md-3 control-label">Confirm:</label>
+                            <div class="col-md-9">
+                                <input type="password" name="pass2" class="form-control"  placeholder="Confirm Password">
+                            </div>
+                        </div>
+
+                        {#=============  User Type   ==================== #}
+                        <div name="form-validate" class="form-group">
+                            <label class="col-md-3 control-label">Register As:</label>
+                            <div class="col-md-9">
+                                <select name="userType">
+                                    <option value="buyer">Buyer</option>
+                                    <option value="seller">Seller</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        {#=============  Image   ==================== #}
+                        <div name="form-validate" class="form-group">
+                            <label class="col-md-3 control-label">User Image:</label>
+                            <div class="col-md-9">
+                            <input type="file" name="profPic" class="form-control">
+                            </div>
+                        </div>
+                        
+                        {#=============  submit   ==================== #}
+
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type="submit" value="Register" class="btn btn-primary">                    
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                {#=============  right   ==================== #}
+
+                <div class="col-md-4">
+                    <h3>How to Register <span class="glyphicon glyphicon-asterisk"></span></h3>
+                    <ol>
+                        <li>Your name  must contain characters.</li>
+                        <li>Select either Seller or Buyer.</li>
+                        <li>Enter your email address.</li>
+                        <li>Login in name should be at least 6 characters with a combination of letters and digits only.</li>
+                        <li>Password must contain a least one digit, an uppercase and lowercase letter.</li>
+                        <li>Retype your password to confirm.</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %} 

@@ -1,0 +1,42 @@
+{% extends "master.html.twig" %}
+
+{% block title %}Product list{% endblock %}
+
+{% block headextra %}
+    <script>
+        var currentPage = {{currentPage}};
+        function loadPage(page) {
+            $('#btPage' + currentPage).removeClass("currentPageButton");
+            currentPage = page;
+            $('#btPage' + currentPage).addClass("currentPageButton");
+            $('#itemsView').load("/ajax/newproducts/" + page);
+            window.history.pushState("", "Product list", "/newproducts/" + page);
+        }
+    </script>
+{% endblock %}
+
+{% block content %} 
+    <div id="itemsView">
+        <table border="1">
+            <tr><th>id</th><th>name</th><th>description</th><th>image</th><th>operations</th></tr>
+                    {% for p in productList %}
+                <tr><td>{{p.id}}</td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.description}}</td>
+                    <td><img src="/{{p.imagePath}}" width="40"></td>
+                    <td><a href="/admin/product/edit/{{p.id}}">edit</a>
+                        <a href="/admin/product/delete/{{p.id}}">delete</a>
+                    </td></tr>
+                {% endfor %}
+        </table>
+    </div>
+
+    <div class="paginationContainer">
+        {% for page in range(1,maxPages) %}
+            <button class="{% if page == currentPage %}currentPageButton{% endif %}"
+                    id="btPage{{page}}" onclick="loadPage({{page}});">{{page}}</button>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

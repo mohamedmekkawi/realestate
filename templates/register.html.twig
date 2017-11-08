@@ -11,7 +11,7 @@
 
 {% block content %}
 
-{#=========================   ================================== #}
+    {#=========================   ================================== #}
 
     {% if errorList %}
         <ul>
@@ -20,11 +20,11 @@
                 {% endfor %}
         </ul>
     {% endif %}
-    
 
 
-{#=========================   ================================== #}
-<script>
+
+    {#=========================   ================================== #}
+    <script>
         $(document).ready(function () {
             $('input[name=email]').bind("propertychange change click keyup input paste", function () {
                 var email = $('input[name=email]').val();
@@ -40,7 +40,7 @@
         });
 
     </script>
-    
+
     <div class="container">
         <div class="well">
             <div class="row">
@@ -51,7 +51,7 @@
                         <div name="form-validate" class="form-group">
 
                             {#=============  Name   ==================== #}
-                            <label class="col-md-3 control-label">Name:</label>
+                            <label class="col-md-3 control-label">Full Name:</label>
                             <div class="col-md-9">
                                 <input type="text" name="name" value="{{v.name}}" class="form-control" placeholder="Ex. Mohamed-mekkawi" >
                             </div>
@@ -72,6 +72,14 @@
                                 <input type="email" name="email" value="{{v.email}}" class="form-control" id="EMAIL"  placeholder="Ex. john-mohamed@example.com" ><span id="isTaken"></span>
                             </div>
                         </div>
+                        {#=============  phone   ==================== #}
+                        <div name="form-validate" class="form-group">
+                            <label class="col-md-3 control-label">Phone:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="phone" value="{{v.phone}}" class="form-control" id="EMAIL"  placeholder="(514)555-5555" ><span id="isTaken"></span>
+                            </div>
+                        </div>
+
 
                         {#=============  Password   ==================== #}
 
@@ -94,22 +102,27 @@
                         {#=============  User Type   ==================== #}
                         <div name="form-validate" class="form-group">
                             <label class="col-md-3 control-label">Register As:</label>
-                            <div id="USER_TYPE" class="col-md-9">
-
-                                <select name="userType" value="{{v.userType}}">
+                            <div class="col-md-9">
+                                <select name="userType">
                                     <option value="buyer">Buyer</option>
                                     <option value="seller">Seller</option>
                                 </select>
-
                             </div>
                         </div>
 
+                        {#=============  Image   ==================== #}
+                        <div name="form-validate" class="form-group">
+                            <label class="col-md-3 control-label">User Image:</label>
+                            <div class="col-md-9">
+                            <input type="file" name="profPic" class="form-control">
+                            </div>
+                        </div>
+                        
                         {#=============  submit   ==================== #}
 
                         <div class="form-group">
                             <div class="col-md-offset-3 col-md-9">
-                                <input type="submit" value="Register" class="btn btn-primary">
-                                <button type="submit" name="" value="Register" class="btn btn-primary" >Register & Sign in</button>
+                                <input type="submit" value="Register" class="btn btn-primary">                    
                             </div>
                         </div>
                     </form>

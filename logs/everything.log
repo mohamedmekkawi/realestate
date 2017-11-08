@@ -58,3 +58,4 @@
 [2017-11-06 17:06:42] main.ERROR: Query: INSERT INTO `users` (`name`,`userType`,`email`,`username`,`password`,`phone`) VALUES ('adam', NULL, 'adam@adam.com', 'adamm', '$2y$10$9EGcB2LfiogjQt8PkpxJ2.QMaQm3i4MJrybdjWyrKYdB4VXjZl6j.', NULL) [] []
 [2017-11-06 18:00:56] main.ERROR: Error: Column 'userType' cannot be null [] []
 [2017-11-06 18:00:56] main.ERROR: Query: INSERT INTO `users` (`name`,`userType`,`email`,`username`,`password`,`phone`) VALUES ('mohamed', NULL, 'mohamed@mohamed.com', 'mohamed', '$2y$10$px/aT9N.IIRI/RWqQDieMO37iPObmFD3rke67OYuw45x98zCRA6Xa', '(514)619-6420 ') [] []
+[2017-11-08 09:16:45] main.ERROR: SQL ERROR: Unable to connect to MySQL server! Error: Access denied for user 'onq8_realestate'@'23.252.46.242' (using password: YES) [] []

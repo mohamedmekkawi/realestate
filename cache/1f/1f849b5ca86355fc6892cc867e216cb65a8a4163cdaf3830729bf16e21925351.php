@@ -58,12 +58,12 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
                     <div class=\"form-group\">
                         <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"User Name\">
                         <input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Password\">
-                        <input type=\"submit\" value=\"Login In\" name=\"login\" class=\"btn btn-default\">
+                        <input type=\"submit\" value=\"login\" name=\"login\" class=\"btn btn-default\">
                     </div>
                 </form>
 
                 <ul class=\"nav navbar-nav navbar-right\">
-                    <li><a href=\"\">Register</a></li>
+                    <li><a href=\"/register\">Register</a></li>
                 </ul>
             </div>
         </div>
@@ -82,13 +82,9 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
             <p class=\"text-center col-md-12\"r style=\"padding-top: 10px\">
             <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
         </footer>
-        
-        <script src=\"../script/registration.js\"></script>
-\t<script src=\"../script/validateform.js\"></script>
-\t<script src=\"../script/jquery-1.11.2.min.js\"></script>
-\t<script src=\"../script/bootstrap.min.js\"></script>
-        
-    </body>
+     ";
+        // line 65
+        echo "    </body>
 </html>";
     }
 
@@ -122,7 +118,7 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
 
     public function getDebugInfo()
     {
-        return array (  114 => 53,  102 => 7,  96 => 5,  80 => 54,  78 => 53,  74 => 51,  39 => 17,  35 => 14,  33 => 7,  28 => 5,  22 => 1,);
+        return array (  110 => 53,  98 => 7,  92 => 5,  87 => 65,  80 => 54,  78 => 53,  74 => 51,  39 => 17,  35 => 14,  33 => 7,  28 => 5,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -173,12 +169,12 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
                     <div class=\"form-group\">
                         <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"User Name\">
                         <input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Password\">
-                        <input type=\"submit\" value=\"Login In\" name=\"login\" class=\"btn btn-default\">
+                        <input type=\"submit\" value=\"login\" name=\"login\" class=\"btn btn-default\">
                     </div>
                 </form>
 
                 <ul class=\"nav navbar-nav navbar-right\">
-                    <li><a href=\"\">Register</a></li>
+                    <li><a href=\"/register\">Register</a></li>
                 </ul>
             </div>
         </div>
@@ -193,12 +189,12 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
             <p class=\"text-center col-md-12\"r style=\"padding-top: 10px\">
             <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
         </footer>
-        
+     {#=========================   
         <script src=\"../script/registration.js\"></script>
 \t<script src=\"../script/validateform.js\"></script>
 \t<script src=\"../script/jquery-1.11.2.min.js\"></script>
 \t<script src=\"../script/bootstrap.min.js\"></script>
-        
+        {#========================= ================================== #}
     </body>
 </html>", "master.html.twig", "/Applications/MAMP/htdocs/realestate/templates/master.html.twig");
     }

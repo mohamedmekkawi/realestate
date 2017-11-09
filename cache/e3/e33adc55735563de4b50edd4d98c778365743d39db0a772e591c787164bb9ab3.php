@@ -94,7 +94,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                     <h3>Registration Form</h3>
                     <form class=\"form-horizontal\" method=\"post\" enctype=\"multipart/form-data\">
 
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
 
                             ";
         // line 54
@@ -109,7 +109,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                         ";
         // line 60
         echo "
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">User Name:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"text\" name=\"username\" value=\"";
@@ -121,32 +121,21 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
 
                         ";
         // line 69
-        echo "                        <div name=\"form-validate\" class=\"form-group\">
+        echo "                        <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">Email:</label>
                             <div class=\"col-md-9\">
-                                <input type=\"email\" name=\"email\" value=\"";
+                                <input type=\"text\" name=\"email\" value=\"";
         // line 72
         echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "email", array()), "html", null, true);
         echo "\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"Ex. john-mohamed@example.com\" ><span id=\"isTaken\"></span>
                             </div>
                         </div>
-                        ";
-        // line 76
-        echo "                        <div name=\"form-validate\" class=\"form-group\">
-                            <label class=\"col-md-3 control-label\">Phone:</label>
-                            <div class=\"col-md-9\">
-                                <input type=\"text\" name=\"phone\" value=\"";
-        // line 79
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "phone", array()), "html", null, true);
-        echo "\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"(514)555-5555\" ><span id=\"isTaken\"></span>
-                            </div>
-                        </div>
 
 
                         ";
-        // line 85
+        // line 78
         echo "
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">Password:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"password\" name=\"pass1\" class=\"form-control\"   placeholder=\"At least 6 characters, with capital letters & digits.\">
@@ -154,9 +143,9 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                         </div>
 
                         ";
-        // line 94
+        // line 87
         echo "
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
                             <label for=\"CONFIRM_PASS\" class=\"col-md-3 control-label\">Confirm:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"password\" name=\"pass2\" class=\"form-control\"  placeholder=\"Confirm Password\">
@@ -164,26 +153,40 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                         </div>
 
                         ";
-        // line 103
-        echo "                        <div name=\"form-validate\" class=\"form-group\">
+        // line 96
+        echo "                        <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">Register As:</label>
                             <div class=\"col-md-9\">
-                                <select name=\"userType\">
+                                <select name=\"userRole\" style=\"width: 100%;\">
                                     <option value=\"buyer\">Buyer</option>
                                     <option value=\"seller\">Seller</option>
                                 </select>
                             </div>
                         </div>
+                        ";
+        // line 106
+        echo "                        <div class=\"form-group\">
+                            <label class=\"col-md-3 control-label\">Phone:</label>
+                            <div class=\"col-md-9\">
+                                <input type=\"text\" name=\"phone\" value=\"";
+        // line 109
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "phone", array()), "html", null, true);
+        echo "\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"(514)555-5555\" ><span id=\"isTaken\"></span>
+                            </div>
+                        </div>
 
                         ";
         // line 114
-        echo "                        <div name=\"form-validate\" class=\"form-group\">
-                            <label class=\"col-md-3 control-label\">User Image:</label>
+        echo "                        <div class=\"form-group\">
+                            <label class=\"col-md-3 control-label\">Phone:</label>
                             <div class=\"col-md-9\">
-                            <input type=\"file\" name=\"profPic\" class=\"form-control\">
+                                <input type=\"text\" name=\"address\" value=\"";
+        // line 117
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "address", array()), "html", null, true);
+        echo "\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"address\" >
                             </div>
                         </div>
-                        
+
                         ";
         // line 122
         echo "
@@ -229,7 +232,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
 
     public function getDebugInfo()
     {
-        return array (  200 => 132,  189 => 122,  180 => 114,  168 => 103,  158 => 94,  148 => 85,  140 => 79,  135 => 76,  129 => 72,  124 => 69,  117 => 64,  111 => 60,  105 => 56,  101 => 54,  73 => 27,  68 => 23,  64 => 21,  55 => 19,  51 => 18,  48 => 17,  46 => 16,  43 => 15,  40 => 13,  37 => 12,  32 => 6,  29 => 5,  11 => 1,);
+        return array (  203 => 132,  192 => 122,  185 => 117,  180 => 114,  173 => 109,  168 => 106,  157 => 96,  147 => 87,  137 => 78,  129 => 72,  124 => 69,  117 => 64,  111 => 60,  105 => 56,  101 => 54,  73 => 27,  68 => 23,  64 => 21,  55 => 19,  51 => 18,  48 => 17,  46 => 16,  43 => 15,  40 => 13,  37 => 12,  32 => 6,  29 => 5,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -292,7 +295,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                     <h3>Registration Form</h3>
                     <form class=\"form-horizontal\" method=\"post\" enctype=\"multipart/form-data\">
 
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
 
                             {#=============  Name   ==================== #}
                             <label class=\"col-md-3 control-label\">Full Name:</label>
@@ -302,7 +305,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                         </div>
                         {#=============  Username   ==================== #}
 
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">User Name:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"text\" name=\"username\" value=\"{{v.username}}\" class=\"form-control\"  placeholder=\"At least 6 characters with letters or digits.\" >
@@ -310,24 +313,17 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                         </div>
 
                         {#=============  Email   ==================== #}
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">Email:</label>
                             <div class=\"col-md-9\">
-                                <input type=\"email\" name=\"email\" value=\"{{v.email}}\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"Ex. john-mohamed@example.com\" ><span id=\"isTaken\"></span>
-                            </div>
-                        </div>
-                        {#=============  phone   ==================== #}
-                        <div name=\"form-validate\" class=\"form-group\">
-                            <label class=\"col-md-3 control-label\">Phone:</label>
-                            <div class=\"col-md-9\">
-                                <input type=\"text\" name=\"phone\" value=\"{{v.phone}}\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"(514)555-5555\" ><span id=\"isTaken\"></span>
+                                <input type=\"text\" name=\"email\" value=\"{{v.email}}\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"Ex. john-mohamed@example.com\" ><span id=\"isTaken\"></span>
                             </div>
                         </div>
 
 
                         {#=============  Password   ==================== #}
 
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">Password:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"password\" name=\"pass1\" class=\"form-control\"   placeholder=\"At least 6 characters, with capital letters & digits.\">
@@ -336,32 +332,39 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
 
                         {#=============  Password(repeat) ==================== #}
 
-                        <div name=\"form-validate\" class=\"form-group\">
+                        <div class=\"form-group\">
                             <label for=\"CONFIRM_PASS\" class=\"col-md-3 control-label\">Confirm:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"password\" name=\"pass2\" class=\"form-control\"  placeholder=\"Confirm Password\">
                             </div>
                         </div>
 
-                        {#=============  User Type   ==================== #}
-                        <div name=\"form-validate\" class=\"form-group\">
+                        {#=============  User Role   ==================== #}
+                        <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">Register As:</label>
                             <div class=\"col-md-9\">
-                                <select name=\"userType\">
+                                <select name=\"userRole\" style=\"width: 100%;\">
                                     <option value=\"buyer\">Buyer</option>
                                     <option value=\"seller\">Seller</option>
                                 </select>
                             </div>
                         </div>
-
-                        {#=============  Image   ==================== #}
-                        <div name=\"form-validate\" class=\"form-group\">
-                            <label class=\"col-md-3 control-label\">User Image:</label>
+                        {#=============  phone   ==================== #}
+                        <div class=\"form-group\">
+                            <label class=\"col-md-3 control-label\">Phone:</label>
                             <div class=\"col-md-9\">
-                            <input type=\"file\" name=\"profPic\" class=\"form-control\">
+                                <input type=\"text\" name=\"phone\" value=\"{{v.phone}}\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"(514)555-5555\" ><span id=\"isTaken\"></span>
                             </div>
                         </div>
-                        
+
+                        {#=============  address   ==================== #}
+                        <div class=\"form-group\">
+                            <label class=\"col-md-3 control-label\">Phone:</label>
+                            <div class=\"col-md-9\">
+                                <input type=\"text\" name=\"address\" value=\"{{v.address}}\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"address\" >
+                            </div>
+                        </div>
+
                         {#=============  submit   ==================== #}
 
                         <div class=\"form-group\">

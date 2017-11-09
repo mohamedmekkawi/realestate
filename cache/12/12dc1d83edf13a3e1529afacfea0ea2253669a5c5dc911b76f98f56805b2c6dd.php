@@ -28,20 +28,23 @@ class __TwigTemplate_4388e1b0576a7bc21d3a9887aed44e5f2d17824aa2a55ffe6833b44de23
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "Internal error";
+        echo "Internal Error";
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        // line 6
         echo "    
-<p>Internal error occurred, we're very sorry.
-    Our team of coding ninjas has been notified
-    and is already working on the problem.</p>
-<p><a href=\"/\">Click to continue</a></p>
-<img src=\"/images/ninja.png\">
-
+    <div class=\"container\">
+        <div class=\"center\">
+         <br>   
+        <p style=\"text-align:center;\"> Internal error occured, we are very sorry.<br>
+        our team of coding ninjas has been notified and is already working on the problems<br>
+        <img src=\"./images/ninja.png\" align=\"middle\"><br>
+        <a href=\"./\">Click to continue</a>.</p>
+        
+    </div>
+    </div>
 ";
     }
 
@@ -57,7 +60,7 @@ class __TwigTemplate_4388e1b0576a7bc21d3a9887aed44e5f2d17824aa2a55ffe6833b44de23
 
     public function getDebugInfo()
     {
-        return array (  38 => 6,  35 => 5,  29 => 3,  11 => 1,);
+        return array (  35 => 5,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -72,16 +75,19 @@ class __TwigTemplate_4388e1b0576a7bc21d3a9887aed44e5f2d17824aa2a55ffe6833b44de23
     {
         return new Twig_Source("{% extends \"master.html.twig\" %}
 
-{% block title %}Internal error{% endblock %}
+{% block title %}Internal Error{% endblock %}
 
-{% block content %}
-    
-<p>Internal error occurred, we're very sorry.
-    Our team of coding ninjas has been notified
-    and is already working on the problem.</p>
-<p><a href=\"/\">Click to continue</a></p>
-<img src=\"/images/ninja.png\">
-
+{% block content %}    
+    <div class=\"container\">
+        <div class=\"center\">
+         <br>   
+        <p style=\"text-align:center;\"> Internal error occured, we are very sorry.<br>
+        our team of coding ninjas has been notified and is already working on the problems<br>
+        <img src=\"./images/ninja.png\" align=\"middle\"><br>
+        <a href=\"./\">Click to continue</a>.</p>
+        
+    </div>
+    </div>
 {% endblock %}", "error_internal.html.twig", "/Applications/MAMP/htdocs/realestate/templates/error_internal.html.twig");
     }
 }

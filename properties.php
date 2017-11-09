@@ -1,4 +1,5 @@
 <?php
+
 // fake $app, $log so that Netbeans can provide suggestions while typing code
 if (false) {
     $app = new \Slim\Slim();
@@ -13,18 +14,18 @@ $app->get('/property/:op(/:id)', function($op, $id = -1) use ($app) {
         $app->render('access_denied.html.twig');
         return;
     }
-     if (($op == 'add' && $id != -1) || ($op == 'edit' && $id == -1)) {
-        echo "INVALID REQUEST"; // FIXME on Monday - display standard 404 from slim
+    if (($op == 'add' && $id != -1) || ($op == 'edit' && $id == -1)) {
+        echo "INVALID REQUEST";
         return;
     }
     //
     if ($id != -1) {
         $values = DB::queryFirstRow('SELECT * FROM property WHERE propertyId=%i', $id);
         if (!$values) {
-            echo "NOT FOUND";  // FIXME on Monday - display standard 404 from slim
+            echo "NOT FOUND";
             return;
         }
-    } else { // nothing to load from database - adding
+    } else {
         $values = array();
     }
     $app->render('/property/property_addedit.html.twig', array(
@@ -40,20 +41,25 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
         $app->render('access_denied.html.twig');
         return;
     }
-     if (($op == 'add' && $id != -1) || ($op == 'edit' && $id == -1)) {
-        echo "INVALID REQUEST"; // FIXME on Monday - display standard 404 from slim
+    if (($op == 'add' && $id != -1) || ($op == 'edit' && $id == -1)) {
+        echo "INVALID REQUEST";
         return;
     }
+    $title = $app->request()->post('title');
     $propertyType = $app->request()->post('propertyType');
     $latitude = $app->request()->post('latitude');
     $longitude = $app->request()->post('longitude');
-    $beds = $app->request()->post('beds');
-    $baths = $app->request()->post('baths');
+    $room = $app->request()->post('room');
+    $bath = $app->request()->post('bath');
+    $Parking = $app->request()->post('Parking');
+    $bath = $app->request()->post('bath');
     $price = $app->request()->post('price');
+    $description = $app->request()->post('description');
     $squreFeet = $app->request()->post('squreFeet');
     //
-    $values = array('propertyType' => $propertyType, 'latitude' => $latitude, 'longitude' => $longitude, 'beds' => $beds, 
-        'baths' => $baths, 'price' => $price, 'squreFeet' => $squreFeet);
+
+    $values = array('title' => $title, 'propertyType' => $propertyType, 'latitude' => $latitude, 'longitude' => $longitude, 'room' => $room,
+        'bath' => $bath,'Parking' => $Parking, 'price' => $price, 'description' => $description, 'squreFeet' => $squreFeet);
     $errorList = array();
     //
     //validate Latitude
@@ -76,18 +82,18 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
         $values['squreFeet'] = '';
         array_push($errorList, "SqureFeet must be between 1 and 99999999.99");
     }
-    // validate baths
-    if (empty($baths) || $baths < 0 || $baths > 10) {
+    // validate bath
+    if (empty($bath) || $bath < 0 || $bath > 10) {
         $values['baths'] = '';
         array_push($errorList, "The number of baths must be between 1 and 10");
     }
-    // validate beds
-    if (empty($beds) || $beds < 0 || $beds > 10) {
-        $values['beds'] = '';
-        array_push($errorList, "The number of beds must be between 1 and 10");
+    // validate room
+    if (empty($room) || $room < 0 || $room > 10) {
+        $values['room'] = '';
+        array_push($errorList, "The number of room must be between 1 and 10");
     }
     //validate image
-     $propertyImage = array();
+    $propertyImage = array();
     // is file being uploaded
 //    if ($_FILES['propertyImage']['error'] != UPLOAD_ERR_NO_FILE) {
 //        $propertyImage = $_FILES['propertyImage'];
@@ -130,7 +136,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
 //            $values['imageId'] = "/" . $imagePath;
 //        }
 //        
-        $app->render('/property/property_addedit.html.twig',  array(
+        $app->render('/property/property_addedit.html.twig', array(
             'errorList' => $errorList,
             'isEditing' => ($id != -1),
             'v' => $values));
@@ -139,10 +145,10 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
         if ($id != -1) {
             DB::update('property', $values, "propertyId=%i", $id);
         } else {
-                DB::insert('property', $values);
+            DB::insert('property', $values);
         }
-  
-        $app->render('/property/property_addedit_success.html.twig' , array('isEditing' => ($id != -1)));
+
+        $app->render('/property/property_addedit_success.html.twig', array('isEditing' => ($id != -1)));
     }
 })->conditions(array(
     'op' => '(edit|add)',
@@ -150,7 +156,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
 ));
 // Veiw of list of property 
 $app->get('/property/list', function() use ($app) {
-    if (!$_SESSION['user'] ) {
+    if (!$_SESSION['user']) {
         $app->render("access_denied.html.twig");
         return;
     }

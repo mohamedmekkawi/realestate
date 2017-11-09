@@ -58,11 +58,14 @@ $app->get('/', function() use ($app) {
    $app->render('/index.html.twig');
 });
 
+
 // ============================================================= require
-require_once 'password_request.php';
+require_once 'register.php';
 
 require_once 'login_logout.php';
 
-require_once 'register.php';
+require_once 'password_request.php';
+
+require_once 'properties.php';
 
 $app->run();

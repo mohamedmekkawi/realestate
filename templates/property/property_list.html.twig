@@ -1,0 +1,44 @@
+{% extends "master.html.twig" %}
+{% block title %}Property list{% endblock %}
+{% block content %}
+    <p><a href="/property/add">Add Property</a><p>
+    <table border=1>
+          <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>PropertyType</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>room</th>
+              <th>Bath</th>
+              <th>Parking</th>
+              <th>Price</th>
+              <th>SqureFeet</th>
+              <th>Description</th>
+              <th>Image</th>
+              <th>action</th>
+          </tr>
+        {% for p in list %}
+                <tr class="{% if loop.index is odd %}rowodd{% else %}roweven{% endif %}">
+                    <td>{{p.propertyId}}</td>
+                    <td>{{p.title}}</td>
+                    <td>{{p.propertyType}}</td>
+                    <td>{{p.latitude}}</td>
+                    <td>{{p.longitude}}</td>
+                    <td>{{p.room}}</td>
+                    <td>{{p.bath}}</td>
+                    <td>{{p.parking}}</td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.squreFeet}}</td>
+                    <td>{{p.description}}</td>
+                    <td><img src="{{p.imagePath}}"  width="200"></td>
+                    <td>
+                        <a href="/property/delete/{{p.propertyId}}">Delete</a>
+                        <a href="/property/edit/{{p.propertyId}}">Edit</a>
+                    </td>
+                </tr>
+        {% else %}
+            <tr><td colspan="6"> You have no property</td></tr>
+        {% endfor %}
+    </table>    
+{% endblock %}

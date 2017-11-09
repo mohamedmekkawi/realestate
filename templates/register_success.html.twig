@@ -1,9 +1,21 @@
 {% extends "master.html.twig" %}
 
 {% block title %}
-    Resister success
+    Register success
 {% endblock %}
 
 {% block content %}
-<p>You've been registered. You may now <a href='../login'>log in</a></p>
+<html>
+        <body>
+            <div class="container">
+                <div class="well">
+                    <h1 style="text-align:center;" >You've been registered. You may now</h1>
+                    
+                    <br>
+                    <p style="text-align:center;" ><a href="./login">click to continue</a></p>
+                </div>
+            </div>
+        </body>
+    </html>
+    
 {% endblock %}

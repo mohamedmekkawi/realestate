@@ -1,6 +1,6 @@
 <?php
 
-/* /register.html.twig */
+/* register.html.twig */
 class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb442923969a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("master.html.twig", "/register.html.twig", 1);
+        $this->parent = $this->loadTemplate("master.html.twig", "register.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
@@ -171,14 +171,14 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                                 <input type=\"text\" name=\"phone\" value=\"";
         // line 109
         echo twig_escape_filter($this->env, $this->getAttribute(($context["v"] ?? null), "phone", array()), "html", null, true);
-        echo "\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"(514)555-5555\" ><span id=\"isTaken\"></span>
+        echo "\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"(514)555-5555\" >
                             </div>
                         </div>
 
                         ";
         // line 114
         echo "                        <div class=\"form-group\">
-                            <label class=\"col-md-3 control-label\">Phone:</label>
+                            <label class=\"col-md-3 control-label\">Address:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"text\" name=\"address\" value=\"";
         // line 117
@@ -222,7 +222,7 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
 
     public function getTemplateName()
     {
-        return "/register.html.twig";
+        return "register.html.twig";
     }
 
     public function isTraitable()
@@ -353,13 +353,13 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
                         <div class=\"form-group\">
                             <label class=\"col-md-3 control-label\">Phone:</label>
                             <div class=\"col-md-9\">
-                                <input type=\"text\" name=\"phone\" value=\"{{v.phone}}\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"(514)555-5555\" ><span id=\"isTaken\"></span>
+                                <input type=\"text\" name=\"phone\" value=\"{{v.phone}}\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"(514)555-5555\" >
                             </div>
                         </div>
 
                         {#=============  address   ==================== #}
                         <div class=\"form-group\">
-                            <label class=\"col-md-3 control-label\">Phone:</label>
+                            <label class=\"col-md-3 control-label\">Address:</label>
                             <div class=\"col-md-9\">
                                 <input type=\"text\" name=\"address\" value=\"{{v.address}}\" class=\"form-control\" id=\"EMAIL\"  placeholder=\"address\" >
                             </div>
@@ -394,6 +394,6 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
     </div>
 
 {% endblock %} 
-", "/register.html.twig", "/Applications/MAMP/htdocs/realestate/templates/register.html.twig");
+", "register.html.twig", "/Applications/MAMP/htdocs/realestate/templates/register.html.twig");
     }
 }

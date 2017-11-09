@@ -36,43 +36,40 @@ class __TwigTemplate_c2cc34c52a4991dd6432617563c84139204aa38de8e706726ae4df5a0f5
     {
         // line 7
         echo "
-";
+    ";
         // line 8
         if (($context["error"] ?? null)) {
             // line 9
-            echo "    <p>Login invalid. Try again or <a href=\"/register\">register</a>.</p>
-";
+            echo "        <p>Login invalid. Try again or <a href=\"/register\">register</a>.</p>
+    ";
         }
         // line 11
         echo "
 
-<html>
-    <body>
-    <div class=\"container\">
-        <div class=\"well\">
-              <h1 class=\"mb-4\">Login</h1>
-              <form method=\"post\">
-                <div class=\"form-group\"> <label>Username</label>
-                  <input type=\"text\"  name=\"username\" class=\"form-control\" placeholder=\"Enter username\"> </div>
-                <div class=\"form-group\"> <label>Password</label>
-                  <input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Password\"> </div>
-                <button type=\"submit\" class=\"btn btn-secondary\">Login</button>
-              </form>
-              <br>
-              <p>Forgot Password?<br> <a id=\"click\" href=\"/password/request\"><b><u>Click here</u></b></a></p>
-              <style> 
-                  #click {
-                      color:white;
-                  }
-              </style>
+    <html>
+        <body>
+            <div class=\"container\">
+                <div class=\"well\">
+                    <h1>Login</h1>
+                    <form method=\"post\">
+                        <div> <label>Username</label>
+                            <input type=\"text\"  name=\"username\"  placeholder=\"Enter username\"> </div>
+                        <div> <label>Password</label>
+                            <input type=\"password\" name=\"pass\" \" placeholder=\"Password\"> </div>
+                        <button type=\"submit\">Login</button>
+                    </form>
+                    <br>
+                    <p>Forgot Password?<br> <a id=\"click\" href=\"/password/request\"><b><u>Click here</u></b></a></p>
+                    <style> 
+                        #click {
+                            color:red;
+                        }
+                    </style>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+
+        </body>
+    </html>
 ";
     }
 
@@ -108,38 +105,35 @@ class __TwigTemplate_c2cc34c52a4991dd6432617563c84139204aa38de8e706726ae4df5a0f5
 
 {% block content %}
 
-{% if error %}
-    <p>Login invalid. Try again or <a href=\"/register\">register</a>.</p>
-{% endif %}
+    {% if error %}
+        <p>Login invalid. Try again or <a href=\"/register\">register</a>.</p>
+    {% endif %}
 
 
-<html>
-    <body>
-    <div class=\"container\">
-        <div class=\"well\">
-              <h1 class=\"mb-4\">Login</h1>
-              <form method=\"post\">
-                <div class=\"form-group\"> <label>Username</label>
-                  <input type=\"text\"  name=\"username\" class=\"form-control\" placeholder=\"Enter username\"> </div>
-                <div class=\"form-group\"> <label>Password</label>
-                  <input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Password\"> </div>
-                <button type=\"submit\" class=\"btn btn-secondary\">Login</button>
-              </form>
-              <br>
-              <p>Forgot Password?<br> <a id=\"click\" href=\"/password/request\"><b><u>Click here</u></b></a></p>
-              <style> 
-                  #click {
-                      color:white;
-                  }
-              </style>
+    <html>
+        <body>
+            <div class=\"container\">
+                <div class=\"well\">
+                    <h1>Login</h1>
+                    <form method=\"post\">
+                        <div> <label>Username</label>
+                            <input type=\"text\"  name=\"username\"  placeholder=\"Enter username\"> </div>
+                        <div> <label>Password</label>
+                            <input type=\"password\" name=\"pass\" \" placeholder=\"Password\"> </div>
+                        <button type=\"submit\">Login</button>
+                    </form>
+                    <br>
+                    <p>Forgot Password?<br> <a id=\"click\" href=\"/password/request\"><b><u>Click here</u></b></a></p>
+                    <style> 
+                        #click {
+                            color:red;
+                        }
+                    </style>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+
+        </body>
+    </html>
 {% endblock %}
 ", "login.html.twig", "/Applications/MAMP/htdocs/realestate/templates/login.html.twig");
     }

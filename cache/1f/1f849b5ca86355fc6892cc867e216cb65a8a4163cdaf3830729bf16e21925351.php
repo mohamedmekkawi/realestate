@@ -46,44 +46,44 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
                     <span class=\"icon-bar\"></span> 
                     <span class=\"icon-bar\"></span> 
                 </button>
-                <a class=\"navbar-brand\" href=\"../\">
+                <a class=\"navbar-brand\" href=\"./\">
                     <img src=\"images/logo.png\" width=\"140\" style=\"margin-top:-10px\">
                 </a> 
             </div>
             
             <div class=\"collapse navbar-collapse\" id=\"nav-bar-links\">
-
-                <form class=\"navbar-form navbar-right\" style=\"border: none\" onSubmit=\"return Validate()\" method=\"post\" action=\"\">
+ ";
+        // line 43
+        echo "                <ul class=\"nav navbar-nav navbar-right\">
+                    <li><a href=\"./login\">Login</a></li>
+                    <li><a href=\"./register\">Register</a></li>
+                    <li><a href=\"./logout\">logout</a></li>
+                    <li><a href=\"./\">Home</a></li>
                     
-                    <div class=\"form-group\">
-                        <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"User Name\">
-                        <input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Password\">
-                        <input type=\"submit\" value=\"login\" name=\"login\" class=\"btn btn-default\">
-                    </div>
-                </form>
-
-                <ul class=\"nav navbar-nav navbar-right\">
-                    <li><a href=\"/register\">Register</a></li>
+                    
+                    
+                    
+                    
                 </ul>
             </div>
         </div>
     </div>
 
 ";
-        // line 51
+        // line 59
         echo "
         <div id=\"centeredContent\">
         ";
-        // line 53
+        // line 61
         $this->displayBlock('content', $context, $blocks);
-        // line 54
+        // line 62
         echo "        </div>
         <footer>
             <p class=\"text-center col-md-12\"r style=\"padding-top: 10px\">
             <small>© Copyright On Q8, 2017. All rights reserved.</small></p>
         </footer>
      ";
-        // line 65
+        // line 73
         echo "    </body>
 </html>";
     }
@@ -106,7 +106,7 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
 ";
     }
 
-    // line 53
+    // line 61
     public function block_content($context, array $blocks = array())
     {
     }
@@ -118,7 +118,7 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
 
     public function getDebugInfo()
     {
-        return array (  110 => 53,  98 => 7,  92 => 5,  87 => 65,  80 => 54,  78 => 53,  74 => 51,  39 => 17,  35 => 14,  33 => 7,  28 => 5,  22 => 1,);
+        return array (  110 => 61,  98 => 7,  92 => 5,  87 => 73,  80 => 62,  78 => 61,  74 => 59,  57 => 43,  39 => 17,  35 => 14,  33 => 7,  28 => 5,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -157,13 +157,13 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
                     <span class=\"icon-bar\"></span> 
                     <span class=\"icon-bar\"></span> 
                 </button>
-                <a class=\"navbar-brand\" href=\"../\">
+                <a class=\"navbar-brand\" href=\"./\">
                     <img src=\"images/logo.png\" width=\"140\" style=\"margin-top:-10px\">
                 </a> 
             </div>
             
             <div class=\"collapse navbar-collapse\" id=\"nav-bar-links\">
-
+ {#=========================
                 <form class=\"navbar-form navbar-right\" style=\"border: none\" onSubmit=\"return Validate()\" method=\"post\" action=\"\">
                     
                     <div class=\"form-group\">
@@ -172,9 +172,17 @@ class __TwigTemplate_3018369d9241e65b0602ec01cb904d03ccd2c814f1b7b77b9752862f738
                         <input type=\"submit\" value=\"login\" name=\"login\" class=\"btn btn-default\">
                     </div>
                 </form>
-
+================================== #}
                 <ul class=\"nav navbar-nav navbar-right\">
-                    <li><a href=\"/register\">Register</a></li>
+                    <li><a href=\"./login\">Login</a></li>
+                    <li><a href=\"./register\">Register</a></li>
+                    <li><a href=\"./logout\">logout</a></li>
+                    <li><a href=\"./\">Home</a></li>
+                    
+                    
+                    
+                    
+                    
                 </ul>
             </div>
         </div>

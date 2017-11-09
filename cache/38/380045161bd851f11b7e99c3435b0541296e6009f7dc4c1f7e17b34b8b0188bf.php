@@ -1,14 +1,14 @@
 <?php
 
-/* /login_success.html.twig */
-class __TwigTemplate_8f5b1b5931a9d6149317c8263de49b67afc32c51e3c09940bf94b9cd1bf47828 extends Twig_Template
+/* logout.html.twig */
+class __TwigTemplate_1e52986d728e1c21cb6c0d41de616501fdc1c1ea5f6f380a216d8e92c8bee677 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("master.html.twig", "/login_success.html.twig", 1);
+        $this->parent = $this->loadTemplate("master.html.twig", "logout.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
@@ -28,21 +28,18 @@ class __TwigTemplate_8f5b1b5931a9d6149317c8263de49b67afc32c51e3c09940bf94b9cd1bf
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "Login successful";
+        echo "Logout";
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
         // line 6
-        echo "    
-<p>Login successful, <a href=\"/\">click to continue</a>.</p>
-
-    <html>
+        echo "    <html>
         <body>
             <div class=\"container\">
                 <div class=\"well\">
-                    <h1 style=\"text-align:center;\" >Login successful</h1>
+                    <h1 style=\"text-align:center;\" >You've been logged out</h1>
                     
                     <br>
                     <p style=\"text-align:center;\" ><a href=\"./\">click to continue</a></p>
@@ -50,12 +47,13 @@ class __TwigTemplate_8f5b1b5931a9d6149317c8263de49b67afc32c51e3c09940bf94b9cd1bf
             </div>
         </body>
     </html>
+    
 ";
     }
 
     public function getTemplateName()
     {
-        return "/login_success.html.twig";
+        return "logout.html.twig";
     }
 
     public function isTraitable()
@@ -80,17 +78,14 @@ class __TwigTemplate_8f5b1b5931a9d6149317c8263de49b67afc32c51e3c09940bf94b9cd1bf
     {
         return new Twig_Source("{% extends \"master.html.twig\" %}
 
-{% block title %}Login successful{% endblock %}
+{% block title %}Logout{% endblock %}
 
 {% block content %}
-    
-<p>Login successful, <a href=\"/\">click to continue</a>.</p>
-
     <html>
         <body>
             <div class=\"container\">
                 <div class=\"well\">
-                    <h1 style=\"text-align:center;\" >Login successful</h1>
+                    <h1 style=\"text-align:center;\" >You've been logged out</h1>
                     
                     <br>
                     <p style=\"text-align:center;\" ><a href=\"./\">click to continue</a></p>
@@ -98,13 +93,7 @@ class __TwigTemplate_8f5b1b5931a9d6149317c8263de49b67afc32c51e3c09940bf94b9cd1bf
             </div>
         </body>
     </html>
-{% endblock %}
-
-
-
-
-
-
-", "/login_success.html.twig", "/Applications/MAMP/htdocs/realestate/templates/login_success.html.twig");
+    
+{% endblock %}", "logout.html.twig", "/Applications/MAMP/htdocs/realestate/templates/logout.html.twig");
     }
 }

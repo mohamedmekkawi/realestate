@@ -39,8 +39,8 @@
 
 =================
 => Date: 9-11-2017
-1-
-2-
+1- DONE - Registration, DONE - Log in, Test registration and log in
+2- Database be modified, Property(Crud), (Buyer-Seller) registration and login 
 3-
 
 =================

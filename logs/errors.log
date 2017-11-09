@@ -195,3 +195,5 @@
 [2017-11-09 18:10:33] main.ERROR: in query: INSERT INTO `property` (`title`,`propertyType`,`latitude`,`longitude`,`room`,`bath`,`Parking`,`price`,`description`,`squreFeet`,`userId`) VALUES ('Title 3', 'townHouse', '12', '120', '3', '1', NULL, '130', 'Description Description Description', '220', '5') [] []
 [2017-11-09 18:15:37] main.ERROR: SQL ERROR: Column 'parking' cannot be null [] []
 [2017-11-09 18:15:37] main.ERROR: in query: INSERT INTO `property` (`title`,`propertyType`,`latitude`,`longitude`,`room`,`bath`,`Parking`,`price`,`description`,`squreFeet`,`userId`) VALUES ('Title 3', 'duplex', '70', '120', '3', '1', NULL, '346', 'Description Description Description', '2456', '5') [] []
+[2017-11-09 18:57:54] main.ERROR: SQL ERROR: Column 'parking' cannot be null [] []
+[2017-11-09 18:57:54] main.ERROR: in query: INSERT INTO `property` (`title`,`propertyType`,`latitude`,`longitude`,`room`,`bath`,`Parking`,`price`,`description`,`squreFeet`,`userId`) VALUES ('Title 3', 'duplex', '80', '111', '3', '1', NULL, '6571', 'Description Description Description', '2903', '5') [] []

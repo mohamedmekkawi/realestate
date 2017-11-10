@@ -35,18 +35,18 @@
 => Date: 8-11-2017
 1- set up remote database, Registration password validation, 
 2- password reset
-3-
+3- fixing server Error
 
 =================
 => Date: 9-11-2017
 1- DONE - Registration, DONE - Log in, Test registration and log in
 2- Database be modified, Property(Crud), (Buyer-Seller) registration and login 
-3-
+3- Slim Error
 
 =================
 => Date: 10-11-2017
-1- add, edit,delete new properties,
-2- add images
+1- {Fixing Slim Error}, {DONE - Add, Edit, Delete properties},
+2- Add images
 3-
 
 =================

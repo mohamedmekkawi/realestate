@@ -2,7 +2,20 @@
 
 {% block title %}Property {% if isEditing %}update{% else %}add{% endif %}{% endblock %}
 
-{% block content %}    
-    <p>Property {% if isEditing %}updated{% else %}added{% endif %}.
-        <a href="/property/list">Click to continue</a>.</p>
+{% block content %} 
+    <html>
+        <body>
+            <div class="container">
+                <div class="well">
+                    <h3 style="text-align:center;">Property {% if isEditing %}updated{% else %}added{% endif %}.<br>
+                        <a href="/property/list">Click to continue</a>.</h3>
+                </div>
+            </div>
+        </body>
+    </html>
+    
+    
+    
+    
+        
 {% endblock %}

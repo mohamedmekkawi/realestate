@@ -41,7 +41,7 @@ $app->post('/register', function() use ($app) {
          );
      
     $errorList = array();
-    //
+
 // =============================================== name validation
     if (strlen($name) < 3 || strlen($name) > 60) {
         $values['name'] = '';
@@ -76,6 +76,7 @@ $app->post('/register', function() use ($app) {
     }
     
 // =============================================== password validation
+    
     if ($pass1 != $pass2) {
         array_push($errorList, "Passwords don't match");
     } else {
@@ -87,19 +88,14 @@ $app->post('/register', function() use ($app) {
                     . "uppercase letter, lowercase letter, digit or special character");
         }
     }
-    
 // =============================================== errorList
     
     if ($errorList) {
-        //3. failed submission
         $app->render('/register.html.twig', array('errorList' => $errorList, 'v' => $values));
     }
     else {
-        //4. Successful submission
-       
       DB::insert('users', $values);
-   $app->render('register_success.html.twig');
-   
+   $app->render('/register_success.html.twig');
     }
      
 });

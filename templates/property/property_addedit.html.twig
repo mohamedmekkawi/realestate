@@ -12,36 +12,132 @@
                 {% endfor %}
         </ul>
     {% endif %}
+
 <div class="container">
         <div class="well">
             <div class="row">
                 <div class="col-md-8">
                     <h3>Add property</h3>
-    <form class="form-horizontal" method="post" enctype="multipart/form-data">
-        Title:  <input type="text" name="title" value="{{v.title}}"><br>
-        Property Type: 
-                    <select name="propertyType">
-                        <option value="appartement">Appartement</option>
-                        <option value="duplex">Duplex</option>
-                        <option value="townHouse">Town House</option>
-                        <option value="house">House</option>
-                        <option value="villa">Villa</option>
-                    </select><br>
-        Latitude:  <input type="number" min="-90 " max="+90 " step="0.01" name="latitude" value="{{v.latitude}}"><br>
-        Longitude: <input type="number" min="-180 " max="+180 " step="0.01" name="longitude" value="{{v.longitude}}"><br>
-        room: <input type="number" min="0" max="10" step="1" name="room" value="{{v.room}}"><br>
-        Bath: <input type="number" min="0" max="10" step="1" name="bath" value="{{v.bath}}"><br>
-        Parking: <input type="number" min="0" max="10" step="1" name="parking" value="{{v.parking}}"><br>
-        Price: <input type="number" min="0" max="999999" step="0.01" name="squreFeet" value="{{v.squreFeet}}"><br>
-        SqureFeet: <input type="number" min="0" max="999999" step="0.01" name="price" value="{{v.price}}"><br>
-        Description:  <input type="text" name="description" value="{{v.description}}"><br>
-        Image: <input type="file" name="propertyImage" ><br><br>
-        <input type="submit" value="Add Property">
-    </form>
+                    <form class="form-horizontal" method="post" enctype="multipart/form-data">
+
+{#=============  Title   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Title:</label>
+                            <div class="col-md-9">
+                            <input type="text" name="title" value="{{v.title}}" class="form-control">
+                            </div>
+                        </div>
+{#=============  Property Type   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Property Type:</label>
+                            <div class="col-md-9">
+                            <select name="propertyType" style="width: 100%;">
+                            <option value="appartement">Appartement</option>
+                            <option value="duplex">Duplex</option>
+                            <option value="townHouse">Town House</option>
+                            <option value="house">House</option>
+                            <option value="villa">Villa</option>
+                        </select>
+                            </div>
+                        </div>
+                        
+{#=============  Latitude   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Latitude:</label>
+                            <div class="col-md-9">
+                            <input type="number" min="-90 " max="+90 " step="0.01" name="latitude" value="{{v.latitude}}"class="form-control">
+                            </div>
+                        </div>
+                            
+{#=============  Longitude:   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Longitude:</label>
+                            <div class="col-md-9">
+                            <input type="number" min="-180 " max="+180 " step="0.01" name="longitude" value="{{v.longitude}}"class="form-control">
+                            </div>
+                        </div>
+                            
+{#=============  room   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">room:</label>
+                            <div class="col-md-9">
+                            <input type="number" min="0" max="10" step="1" name="room" value="{{v.room}}"class="form-control">
+                            </div>
+                        </div>
+                            
+{#=============  Bath:   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Bath:</label>
+                            <div class="col-md-9">
+                            <input type="number" min="0" max="10" step="1" name="bath" value="{{v.bath}}"class="form-control">
+                            </div>
+                        </div>
+                            
+{#=============  Parking:   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Parking:</label>
+                            <div class="col-md-9">
+                            <input type="number" min="0" max="10" step="1" name="parking" value="{{v.parking}}"class="form-control">
+                            </div>
+                        </div>
+                            
+{#=============  Price:   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Price:</label>
+                            <div class="col-md-9">
+                            <input type="number" min="0" max="999999" step="0.01" name="squreFeet" value="{{v.squreFeet}}"class="form-control">
+                            </div>
+                        </div>
+                            
+{#=============  SqureFeet:   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">SqureFeet:</label>
+                            <div class="col-md-9">
+                            <input type="number" min="0" max="999999" step="0.01" name="price" value="{{v.price}}"class="form-control">
+                            </div>
+                        </div>
+                            
+{#=============  Description:   ==================== #}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Description:</label>
+                            <div class="col-md-9">
+                            <textarea rows="4" cols="50" name="description"
+                            value="{{v.description}}"class="form-control"> Enter text here...</textarea>
+                            </div>
+                        </div>
+{#=============  Image:   ==================== #}
+                        <div class="form-group">
+                           <label class="col-md-3 control-label">Image:</label>
+                            <div class="col-md-9">
+                            <input type="file" name="propertyImage" class="form-control">
+                            </div>
+                        </div>
+{#=============  submit   ==================== #}
+
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type="submit" value="Add Property" class="btn btn-primary"class="form-control">                    
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+{#=============  right   ==================== #}
+
+                <div class="col-md-4">
+                    <h3>How to Add <span class="glyphicon glyphicon-asterisk"></span></h3>
+                    <ol>
+                        <li>Your name  must contain characters.</li>
+                        <li>Select either Seller or Buyer.</li>
+                        <li>Enter your email address.</li>
+                        <li>Login in name should be at least 6 characters with a combination of letters and digits only.</li>
+                        <li>Password must contain a least one digit, an uppercase and lowercase letter.</li>
+                        <li>Retype your password to confirm.</li>
+                    </ol>
+                </div>
+            </div>
 
         </div>
-</div>
-                </div>
-</div>
-            
+    </div>
+
 {% endblock %}

@@ -216,7 +216,11 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
 
         </div>
     </div>
-
+        <script src=\"/script/registration.js\"></script>
+       <script src=\"/script/validateform.js\"></script>
+       <script src=\"/script/jquery-1.11.2.min.js\"></script>
+       <script src=\"/script/bootstrap.min.js\"></script>
+    
 ";
     }
 
@@ -392,7 +396,11 @@ class __TwigTemplate_63082750792fc545552b6254bf89a7ef5444df3a9b4ae046e96bdb44292
 
         </div>
     </div>
-
+        <script src=\"/script/registration.js\"></script>
+       <script src=\"/script/validateform.js\"></script>
+       <script src=\"/script/jquery-1.11.2.min.js\"></script>
+       <script src=\"/script/bootstrap.min.js\"></script>
+    
 {% endblock %} 
 ", "register.html.twig", "/Applications/MAMP/htdocs/realestate/templates/register.html.twig");
     }

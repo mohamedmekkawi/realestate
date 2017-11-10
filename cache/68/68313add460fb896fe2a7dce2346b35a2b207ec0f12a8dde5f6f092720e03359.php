@@ -1,14 +1,14 @@
 <?php
 
-/* logout.html.twig */
-class __TwigTemplate_1e52986d728e1c21cb6c0d41de616501fdc1c1ea5f6f380a216d8e92c8bee677 extends Twig_Template
+/* access_denied.html.twig */
+class __TwigTemplate_59fb2eb17e1002e6989f56604b7cae4c5fa7d7ae8bd5cb923d923eef89dedafd extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("master.html.twig", "logout.html.twig", 1);
+        $this->parent = $this->loadTemplate("master.html.twig", "access_denied.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
@@ -28,32 +28,20 @@ class __TwigTemplate_1e52986d728e1c21cb6c0d41de616501fdc1c1ea5f6f380a216d8e92c8b
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "Logout";
+        echo "Access denied";
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        // line 6
-        echo "    <html>
-        <body>
-            <div class=\"container\">
-                <div class=\"well\">
-                    <h1 style=\"text-align:center;\" >You've been logged out</h1>
-                    
-                    <br>
-                    <p style=\"text-align:center;\" ><a href=\"./\">click to continue</a></p>
-                </div>
-            </div>
-        </body>
-    </html>
-    
+        echo "  
+<p>Access denied. <a href=\"/\">Click to continue</a>.</p>
 ";
     }
 
     public function getTemplateName()
     {
-        return "logout.html.twig";
+        return "access_denied.html.twig";
     }
 
     public function isTraitable()
@@ -63,7 +51,7 @@ class __TwigTemplate_1e52986d728e1c21cb6c0d41de616501fdc1c1ea5f6f380a216d8e92c8b
 
     public function getDebugInfo()
     {
-        return array (  38 => 6,  35 => 5,  29 => 3,  11 => 1,);
+        return array (  35 => 5,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -78,22 +66,10 @@ class __TwigTemplate_1e52986d728e1c21cb6c0d41de616501fdc1c1ea5f6f380a216d8e92c8b
     {
         return new Twig_Source("{% extends \"master.html.twig\" %}
 
-{% block title %}Logout{% endblock %}
+{% block title %}Access denied{% endblock %}
 
-{% block content %}
-    <html>
-        <body>
-            <div class=\"container\">
-                <div class=\"well\">
-                    <h1 style=\"text-align:center;\" >You've been logged out</h1>
-                    
-                    <br>
-                    <p style=\"text-align:center;\" ><a href=\"./\">click to continue</a></p>
-                </div>
-            </div>
-        </body>
-    </html>
-    
-{% endblock %}", "logout.html.twig", "/Applications/MAMP/htdocs/realestate/templates/logout.html.twig");
+{% block content %}  
+<p>Access denied. <a href=\"/\">Click to continue</a>.</p>
+{% endblock %}", "access_denied.html.twig", "/Applications/MAMP/htdocs/realestate/templates/access_denied.html.twig");
     }
 }

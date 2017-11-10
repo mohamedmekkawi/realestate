@@ -45,8 +45,8 @@
 
 =================
 => Date: 10-11-2017
-1-
-2-
+1- add, edit,delete new properties,
+2- add images
 3-
 
 =================

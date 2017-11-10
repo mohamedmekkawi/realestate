@@ -37,3 +37,10 @@
 	padding:.1em 4%;
 	border-radius: 10px;
 }
+
+th{
+    padding: 5px;
+    background-color: #0077A2;
+    color: #fff;
+    text-align: center;
+}

@@ -2,15 +2,20 @@
 
 {% block title %}Internal Error{% endblock %}
 
-{% block content %}    
-    <div class="container">
-        <div class="center">
-         <br>   
-        <p style="text-align:center;"> Internal error occured, we are very sorry.<br>
-        our team of coding ninjas has been notified and is already working on the problems<br>
-        <img src="/images/ninja.png" align="middle"><br>
-        <a href="/">Click to continue</a>.</p>
-        
-    </div>
-    </div>
+{% block content %} 
+    <html>
+        <body>
+            <div class="container">
+                <div class="well">
+                    <h3 style="text-align:center;">Internal Error</h3>
+                    <p style="text-align:center;"> Internal error occured, we are very sorry.<br>
+                        our team of coding ninjas has been notified <br>
+                        and is already working on the problems<br>
+                        <img src="/images/ninja.png" align="middle"><br>
+                        <a href="/">Click to continue</a>.</p>
+                </div>
+            </div>
+        </body>
+    </html>
+
 {% endblock %}

@@ -51,7 +51,6 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
     $room           = $app->request()->post('room');
     $bath           = $app->request()->post('bath');
     $parking        = $app->request()->post('parking');
-    $bath           = $app->request()->post('bath');
     $price          = $app->request()->post('price');
     $description    = $app->request()->post('description');
     $squreFeet      = $app->request()->post('squreFeet');
@@ -189,19 +188,6 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
     'op' => '(edit|add)',
     'id' => '\d+'
 ));
-
-
-// =======================================
-
-    $propertyImage = array();
-   
-    if ($errorList) { 
-        
-    } else { 
-        $values['userId'] = $_SESSION['user']['userId'];
-    
- 
-
 
 
 // ======================================= list of property

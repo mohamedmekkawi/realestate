@@ -75,4 +75,6 @@ require_once 'password_request.php';
 
 require_once 'properties.php';
 
+require_once 'googlemaps.php';
+
 $app->run();

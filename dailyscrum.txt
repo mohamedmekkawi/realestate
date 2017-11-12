@@ -46,12 +46,12 @@
 =================
 => Date: 10-11-2017
 1- {Fixing Slim Error}, {DONE - Add, Edit, Delete properties},
-2- Add images
-3-
+2- Add images, update trello board, 
+3- google maps
 
 =================
 => Date: 11-11-2017
-1-
+1- update trello board, google maps
 2-
 3-
 

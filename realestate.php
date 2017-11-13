@@ -77,4 +77,6 @@ require_once 'properties.php';
 
 require_once 'googlemaps.php';
 
+require_once 'search_property.php';
+
 $app->run();

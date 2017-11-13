@@ -51,21 +51,21 @@
 
 =================
 => Date: 11-11-2017
-1- update trello board, google maps
-2-
-3-
+1- {update trello board}, {google maps}
+2- {Add images}
+3- {search}
 
 =================
 => Date: 12-11-2017
-1-
-2-
+1- {testing google maps}
+2- {search, Add images}
 3-
 
 =================
 => Date: 13-11-2017
-1-
-2-
-3-
+1- {fixing google maps}, {testing Add images}{modify Database}
+2- {search},{menu}
+3- 
 
 =================
 => Date: 14-11-2017

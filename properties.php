@@ -54,6 +54,8 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
     $price          = $app->request()->post('price');
     $description    = $app->request()->post('description');
     $squreFeet      = $app->request()->post('squreFeet');
+    $imageTitle     = $app->request()->post('imageTitle');
+    $imagePath      = $app->request()->post('imagePath');
 
     
 // ======================================= values
@@ -68,8 +70,10 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
         'parking'       => $parking,
         'price'         => $price,
         'description'   => $description,
-        'squreFeet'     => $squreFeet);
-    
+        'squreFeet'     => $squreFeet,
+        'imageTitle'    => $imageTitle,
+        'imagePath'     => $imagePath);
+        
     $errorList = array();
     
 // ========  title validate
@@ -132,6 +136,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
     //fixing
     
     $propertyImage = array();
+    
     if ($_FILES['propertyImage']['error'] !=UPLOAD_ERR_NO_FILE) {
         $propertyImage = $_FILES['propertyImage'];
         if ($propertyImage['error'] != 0) {

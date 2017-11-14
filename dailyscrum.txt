@@ -64,13 +64,13 @@
 =================
 => Date: 13-11-2017
 1- {fixing google maps}, {testing Add images}{modify Database}
-2- {search},{menu}
+2- {search},
 3- 
 
 =================
 => Date: 14-11-2017
-1-
-2-
+1- Fixed templates design
+2- {menu}
 3-
 
 =================

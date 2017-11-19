@@ -7,8 +7,8 @@ session_start();
 
 require_once 'vendor/autoload.php';
 
-DB::$dbName = 'onq8_realestate2';
-DB::$user = 'onq8_realestate2';
+DB::$dbName = 'onq8_realestate3';
+DB::$user = 'onq8_realestate3';
 DB::$encoding = 'utf8';
 DB::$password = 'Adam@462011';
 //DB::$host = 'onq8.com';

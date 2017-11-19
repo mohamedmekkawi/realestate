@@ -1,5 +1,6 @@
 <?php
 
+
 if (false) {
     $app = new \Slim\Slim();
     $log = new Logger('main');
@@ -8,6 +9,7 @@ if (!isset($_SESSION['user'])) {
     $_SESSION['user'] = array();
 }
 // ======================================= add
+
 $app->get('/property/:op(/:id)', function($op, $id = -1) use ($app) {
     if (!$_SESSION['user']) {
         $app->render('access_denied.html.twig');
@@ -44,6 +46,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
         echo "INVALID REQUEST";
         return;
     }
+    
     $title          = $app->request()->post('title');
     $propertyType   = $app->request()->post('propertyType');
     $latitude       = $app->request()->post('latitude');
@@ -52,10 +55,9 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
     $bath           = $app->request()->post('bath');
     $parking        = $app->request()->post('parking');
     $price          = $app->request()->post('price');
-    $description    = $app->request()->post('description');
     $squreFeet      = $app->request()->post('squreFeet');
-    $imageTitle     = $app->request()->post('imageTitle');
-    $imagePath      = $app->request()->post('imagePath');
+    $description    = $app->request()->post('description');
+  
 
     
 // ======================================= values
@@ -69,13 +71,14 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
         'bath'          => $bath,
         'parking'       => $parking,
         'price'         => $price,
-        'description'   => $description,
         'squreFeet'     => $squreFeet,
-        'imageTitle'    => $imageTitle,
-        'imagePath'     => $imagePath);
+        'description'   => $description,
+
+        );
         
     $errorList = array();
     
+ 
 // ========  title validate
     if (strlen($title) < 5 || strlen($title) > 250) {
         $values['title'] = '';
@@ -108,7 +111,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
     }
     
 // ========  parking validate
-    if (empty($bath) || $bath < 0 || $parking > 10) {
+    if (empty($parking) || $parking < 0 || $parking > 10) {
         $values['parking'] = '';
         array_push($errorList, "The number of parking must be between 1 and 10");
     }
@@ -131,7 +134,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
         array_push($errorList, "SqureFeet must be between 1 and 99999999.99");
     }
 
-    
+     
 // ========  image validate 
     //fixing
     
@@ -183,7 +186,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
             $values['imagePath'] = "/" . $imagePath;
         }
         if ($id != -1) {
-            DB::update('property', $values, "id=%i", $id);
+            DB::update('property', $values);
         } else {
             DB::insert('property', $values);
         }

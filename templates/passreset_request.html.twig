@@ -4,16 +4,31 @@
 
 {% block content %}
 
-    <p>Enter your email below and we'll send you password reset link</p>
+    <html>
+        <body>
+            <div class="container">
+                <div class="well">
+                    <p style="text-align:center;">Enter your email below and we'll send you password reset link</p>
+                    
+                    <form method="post" style="text-align:center;">
+                        <div> <label>Email:</label>
+                            <input type="email"  name="email"  placeholder="Enter Email"  style="width: 30%;" > </div>
+                        
+                        <button type="submit">Request reset email</button>
+                    </form>
+                    
+                </div>
+            </div>
+
+        </body>
+    </html>
+    
+    
     
     {% if error %}
         <p>We weren't able to find email you provided in our records.
             Try again or <a href="/register">register</a> a new account.
     {% endif %}
     
-<form method="post">
-    Email: <input type="email" name="email"><br>    
-    <input type="submit" value="Request reset email">
-</form>
 
 {% endblock %}

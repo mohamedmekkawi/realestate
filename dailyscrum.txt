@@ -75,20 +75,20 @@
 
 =================
 => Date: 15-11-2017
-1-
-2-
+1- {menu}
+2- {fixing google maps}, {testing Add images}
 3-
 
 =================
 => Date: 16-11-2017
-1-
-2-
+1- work in the portfolio.
+2- work in the presentation.
 3-
 
 =================
 => Date: 17-11-2017
-1-
-2-
+1- work in the presentation.
+2- work in the cv.
 3-
 
 =================

@@ -14,7 +14,7 @@ $app->get('/isusernameregistered/:username', function($username) use ($app) {
     echo!$row ? "" : '<span style="font-size: 16px; background-color: lightblue; color: red; font-weight: bold;">Username already Taken<?span>';
 });
 // =============================================== register
-$app->get('/register', function() use ($app) {
+$app->get('/register', function() use ($app, $log) {
     $app->render('register.html.twig');
 });
 

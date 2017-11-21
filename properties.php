@@ -185,8 +185,9 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
             // TODO: if EDITING and new file is uploaded we should delete the old one in uploads
             $values['imagePath'] = "/" . $imagePath;
         }
+        $values['userId'] = $_SESSION['user']['userId'];
         if ($id != -1) {
-            DB::update('property', $values);
+            DB::update('property', $values,"propertyId=%i", $id);
         } else {
             DB::insert('property', $values);
         }
@@ -241,4 +242,58 @@ $app->post('/property/delete/:id', function($id) use ($app) {
     } else {
         $app->render('/property/property_delete_success.html.twig');
     }
+});
+
+
+// URL/event handlers go here
+$app->get('/products(/:page)', function($page = 1) use ($app) {
+    $perPage = 4;
+    $totalCount = DB::queryFirstField ("SELECT COUNT(*) AS count FROM products");
+    $maxPages = ($totalCount + $perPage - 1) / $perPage;
+    if ($page > $maxPages) {
+        http_response_code(404);
+        $app->render('not_found.html.twig');
+        return;
+    }
+    $skip = ($page - 1) * $perPage;
+    $productList = DB::query("SELECT * FROM products ORDER BY id LIMIT %d,%d", $skip, $perPage);
+    $app->render('products.html.twig', array(
+        "productList" => $productList,
+        "maxPages" => $maxPages
+        ));
+});
+
+// Properties pagination usinx AJAX - main page
+$app->get('/newprperties(/:page)', function($page = 1) use ($app) {
+    $perPage = 4;
+    $totalCount = DB::queryFirstField ("SELECT COUNT(*) AS count FROM property");
+    $maxPages = ($totalCount + $perPage - 1) / $perPage;
+    if ($page > $maxPages) {
+        http_response_code(404);
+        $app->render('not_found.html.twig');
+        return;
+    }
+    $skip = ($page - 1) * $perPage;
+    $propertyList = DB::query("SELECT * FROM prperty ORDER BY id LIMIT %d,%d", $skip, $perPage);
+    $app->render('propery.html.twig', array(
+        "propertyList" => $propetyList,
+        "maxPages" => $maxPages,
+        "currentPage" => $page
+        ));
+});
+// Products pagination usinx AJAX - just the table of products
+$app->get('/ajax/newproperties(/:page)', function($page = 1) use ($app) {
+    $perPage = 4;
+    $totalCount = DB::queryFirstField ("SELECT COUNT(*) AS count FROM property");
+    $maxPages = ($totalCount + $perPage - 1) / $perPage;
+    if ($page > $maxPages) {
+        http_response_code(404);
+        $app->render('not_found.html.twig');
+        return;
+    }
+    $skip = ($page - 1) * $perPage;
+    $productList = DB::query("SELECT * FROM property ORDER BY id LIMIT %d,%d", $skip, $perPage);
+    $app->render('/property/ajaxnewproperties.html.twig', array(
+        "propertyList" => $propertyList,
+        ));
 });

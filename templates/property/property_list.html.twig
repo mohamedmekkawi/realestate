@@ -6,7 +6,13 @@
         <body>
             <div class="container">
                 <div class="well">
-                    <h1 style="text-align:center;" >Property list</h1>
+                    <h1 style="text-align:center;" >Property list</h1>                
+                    
+
+        
+                                    
+                                    
+                                    
                     
                     <table style="text-align:center;" border=1>
                         <tr>
@@ -24,7 +30,9 @@
                         {% for p in list %}
                             <tr class="{% if loop.index is odd %}rowodd{% else %}roweven{% endif %}">
 
-                                <td>{{p.title}}</td>
+                                <td> 
+                                    <a href="/property/{{p.propertyId}}">{{p.title}}</a>
+                                </td>
                                 <td>{{p.propertyType}}</td>
                                 <td>{{p.room}}</td>
                                 <td>{{p.bath}}</td>
@@ -36,6 +44,7 @@
                                 <td>
                                     <a href="/property/delete/{{p.propertyId}}">Delete</a>
                                     <a href="/property/edit/{{p.propertyId}}">Edit</a>
+                                    <a href="/property/googlemap/{{p.propertyId}}">Location</a>
                                 </td>
                             </tr>
                         {% else %}

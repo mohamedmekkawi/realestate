@@ -5,8 +5,8 @@ $app->get('/property/googlemaps', function() use ($app) {
         $app->render("access_denied.html.twig");
         return;
     }
-   $userId = $_SESSION['user']['userId'];
-   $propertyList = DB::query("SELECT * FROM property WHERE userId =%i", $userId);
+   
+   $propertyList = DB::query("SELECT * FROM property");
     if (!$propertyList) {
         $app->render("/not_found.html.twig");
         return;
@@ -19,7 +19,7 @@ $app->get('/property/googlemap/:id', function($id) use ($app) {
         $app->render("access_denied.html.twig");
         return;
     }
-    $property = DB::queryFirstRow("SELECT * FROM property WHERE propertyId=%d AND userId=%i", $id, $_SESSION['user']['userId']);
+    $property = DB::queryFirstRow("SELECT * FROM property WHERE propertyId=%d" , $id);
     if (!$property) {
         $app->render("/not_found.html.twig");
         return;

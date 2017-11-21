@@ -1,0 +1,28 @@
+{% extends "master.html.twig" %}
+{% block title %}Property list{% endblock %}
+
+{% block headextra %}
+
+<table border="1">
+    <tr class="{% if loop.index is odd %}rowodd{% else %}roweven{% endif %}">
+    {% for p in propertyList %}
+                                <td> 
+                                    <a href="/property/{{p.propertyId}}">{{p.title}}</a>
+                                </td>
+                                <td>{{p.propertyType}}</td>
+                                <td>{{p.room}}</td>
+                                <td>{{p.bath}}</td>
+                                <td>{{p.parking}}</td>
+                                <td>{{p.price}}</td>
+                                <td>{{p.squreFeet}}</td>
+                                <td>{{p.description}}</td>
+                                <td><img src="{{p.imagePath}}"  width="100"></td>
+                                <td>
+                                    <a href="/property/delete/{{p.propertyId}}">Delete</a>
+                                    <a href="/property/edit/{{p.propertyId}}">Edit</a>
+                                    <a href="/property/googlemap/{{p.propertyId}}">Location</a>
+                                </td>
+                            </tr>
+        {% endfor %}
+</table>
+{% endblock %}

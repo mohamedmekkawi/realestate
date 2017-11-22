@@ -7,32 +7,24 @@
             <div class="container">
                 <div class="well">
                     <h1 style="text-align:center;" >Property list</h1>                
-                    
 
-        
-                                    
-                                    
-                                    
-                    
                     <table style="text-align:center;" border=1>
                         <tr>
                             <th>Title</th>
                             <th>Property Type</th>
-                            <th>room</th>
+                            <th>Room</th>
                             <th>Bath</th>
                             <th>Parking</th>
                             <th>Price</th>
                             <th>Squre Feet</th>
                             <th>Description</th>
                             <th>Image</th>
-                            <th>action</th>
+                            <th>Action</th>
                         </tr>
                         {% for p in list %}
                             <tr class="{% if loop.index is odd %}rowodd{% else %}roweven{% endif %}">
 
-                                <td> 
-                                    <a href="/property/{{p.propertyId}}">{{p.title}}</a>
-                                </td>
+                                <td><a href="/property/new/{{p.propertyId}}">{{p.title}}</a></td>
                                 <td>{{p.propertyType}}</td>
                                 <td>{{p.room}}</td>
                                 <td>{{p.bath}}</td>
@@ -40,11 +32,11 @@
                                 <td>{{p.price}}</td>
                                 <td>{{p.squreFeet}}</td>
                                 <td>{{p.description}}</td>
-                                <td><img src="{{p.imagePath}}"  width="100"></td>
-                                <td>
-                                    <a href="/property/delete/{{p.propertyId}}">Delete</a>
-                                    <a href="/property/edit/{{p.propertyId}}">Edit</a>
-                                    <a href="/property/googlemap/{{p.propertyId}}">Location</a>
+                                <td><img src="{{p.imagePath}}"  width="250"></td>
+                                <td width="50">
+                                    <img src="/images/delet.png" alt="delete"><a href="/property/delete/{{p.propertyId}}">Delete</a><br><br>
+                                    <img src="/images/edit.png" alt="edit"><a href="/property/edit/{{p.propertyId}}">Edit</a><br><br>
+                                    <img src="/images/location.png" alt="location"><a href="/property/googlemap/{{p.propertyId}}">Location</a>
                                 </td>
                             </tr>
                         {% else %}
@@ -53,7 +45,7 @@
                     </table>   
                     <br>
                     <br>
-                    <p style="text-align:center;" ><a href="/property/add">Add New Property</a></p>
+                    <h3 style="text-align:center;" ><a href="/property/add">Add New Property</a></h3>
                 </div>
             </div>
         </body>

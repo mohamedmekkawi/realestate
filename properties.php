@@ -136,7 +136,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
 
      
 // ========  image validate 
-    //fixing
+
     
     $propertyImage = array();
     
@@ -150,31 +150,29 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
                 array_push($errorList, "Invalid file name");
                 $log->warn("Uploaded file name with .. in it (possible attack): " . print_r($propertyImage, true));
             }
-            // TODO: check if file already exists, check maximum size of the file, dimensions of the image etc.
             $info = getimagesize($propertyImage["tmp_name"]);
             if ($info == FALSE) {
                 array_push($errorList, "File doesn't look like a valid image");
             } else {
                 if ($info['mime'] == 'image/jpeg' || $info['mime'] == 'image/gif' || $info['mime'] == 'image/png') {
-                    // image type is valid - all good
                 } else {
                     array_push($errorList, "Image must be a JPG, GIF, or PNG only.");
                 }
             }
         }
-    } else { // no file uploaded
+    } else { 
         if ($op == 'add') {
             array_push($errorList, "Image is required when creating new property");
         }
     }
 
     //
-    if ($errorList) { // 3. failed submission
+    if ($errorList) { 
         $app->render('/property/property_addedit.html.twig', array(
             'errorList' => $errorList,
             'isEditing' => ($id != -1),
             'v' => $values));
-    } else { // 2. successful submission
+    } else { 
         if ($propertyImage) {
             $imagePath = 'uploads/' . $propertyImage['name'];
             if (!move_uploaded_file($propertyImage['tmp_name'], $imagePath)) {
@@ -182,7 +180,7 @@ $app->post('/property/:op(/:id)', function($op, $id = -1) use ($app) {
                 $app->render('internal_error.html.twig');
                 return;
             }
-            // TODO: if EDITING and new file is uploaded we should delete the old one in uploads
+           
             $values['imagePath'] = "/" . $imagePath;
         }
         $values['userId'] = $_SESSION['user']['userId'];
@@ -210,6 +208,22 @@ $app->get('/property/list', function() use ($app) {
     $propertyList = DB::query("SELECT * FROM property WHERE userId =%i", $userId);
     $app->render("/property/property_list.html.twig", array('list' => $propertyList));
 });
+
+// URL
+$app->get('/property/new/:id', function($id) use ($app) {
+    if (!$_SESSION['user']) {
+        $app->render("access_denied.html.twig");
+        return;
+    }
+$property = DB::queryFirstRow("SELECT * FROM property WHERE propertyId=%d" , $id);
+if (!$property) {
+        $app->render("/not_found.html.twig");
+        return;
+    }
+    $app->render("/property/property_new.html.twig", array('p' => $property));
+});
+
+
 
 
 // ======================================= Delete Property
@@ -245,7 +259,9 @@ $app->post('/property/delete/:id', function($id) use ($app) {
 });
 
 
-// URL/event handlers go here
+
+
+
 $app->get('/products(/:page)', function($page = 1) use ($app) {
     $perPage = 4;
     $totalCount = DB::queryFirstField ("SELECT COUNT(*) AS count FROM products");

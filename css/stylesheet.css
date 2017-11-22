@@ -44,3 +44,20 @@ th{
     color: #fff;
     text-align: center;
 }
+
+#map {
+    height: 300px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+tr:nth-child(even) {background-color: #bcbcbc;}
+
